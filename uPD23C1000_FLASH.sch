@@ -889,4 +889,12 @@ Wire Bus Line
 	7780 2050 7780 5660
 Wire Bus Line
 	1140 2050 1140 5660
+Text Notes 1780 1700 0    50   ~ 0
+DIP28 legs
+Text Notes 4250 1680 0    50   ~ 0
+8x20mm TSOP32
+Text Notes 6270 1700 0    50   ~ 0
+8x14mm TSOP32
+Text Notes 8360 1720 0    50   ~ 0
+7x9pin PLCC32
 $EndSCHEMATC

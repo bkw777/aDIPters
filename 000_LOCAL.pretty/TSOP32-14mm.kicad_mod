@@ -1,4 +1,4 @@
-(module TSOP32-14mm (layer F.Cu) (tedit 5E62186F)
+(module TSOP32-14mm (layer F.Cu) (tedit 5E62B5BA)
   (descr "Module CMS TSOP 32 pins")
   (tags "CMS TSOP")
   (attr virtual)

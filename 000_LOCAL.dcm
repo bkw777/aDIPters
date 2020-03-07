@@ -30,6 +30,18 @@ K Jumper SPST
 F ~
 $ENDCMP
 #
+$CMP Jumper_3_Bridged12
+D Jumper, 3-pole, pins 1+2 closed/bridged
+K Jumper SPDT
+F ~
+$ENDCMP
+#
+$CMP Jumper_4_Bridged23
+D Jumper, 3-pole, pins 1+2 closed/bridged
+K Jumper SPDT
+F ~
+$ENDCMP
+#
 $CMP R_US
 D Resistor, US symbol
 K R res resistor
