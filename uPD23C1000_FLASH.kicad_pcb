@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 141)
+    (drawings 142)
     (tracks 357)
     (zones 0)
     (modules 7)
@@ -11,8 +11,8 @@
 
   (page A4)
   (layers
-    (0 F.Cu signal)
-    (31 B.Cu signal)
+    (0 F.Cu signal hide)
+    (31 B.Cu signal hide)
     (32 B.Adhes user hide)
     (33 F.Adhes user hide)
     (34 B.Paste user hide)
@@ -20,7 +20,7 @@
     (36 B.SilkS user)
     (37 F.SilkS user)
     (38 B.Mask user hide)
-    (39 F.Mask user hide)
+    (39 F.Mask user)
     (40 Dwgs.User user hide)
     (41 Cmts.User user hide)
     (42 Eco1.User user hide)
@@ -869,6 +869,9 @@
     )
   )
 
+  (gr_text ROM0 (at 155.5242 90.2716 -90) (layer F.SilkS) (tstamp 5E65CE70)
+    (effects (font (size 0.8128 0.8128) (thickness 0.127)))
+  )
   (gr_text NEC (at 145.08 106.46 -90) (layer F.SilkS) (tstamp 5E636E12)
     (effects (font (size 0.8 0.8) (thickness 0.16)))
   )
@@ -881,7 +884,7 @@
   (gr_text "NEC PC-8300 System ROM" (at 145 100 90) (layer B.SilkS) (tstamp 5E61CED7)
     (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
   )
-  (gr_text tandy.wiki/FlashROM_8300 (at 156 100 90) (layer B.SilkS) (tstamp 5E6199A3)
+  (gr_text http://tandy.wiki/FlashROM_8300 (at 155.9814 98.7806 90) (layer B.SilkS) (tstamp 5E6199A3)
     (effects (font (size 0.8 0.8) (thickness 0.1)) (justify mirror))
   )
   (gr_text "R1: 47k" (at 147 108.5 90) (layer B.SilkS) (tstamp 5E369BB7)
