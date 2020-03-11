@@ -19,7 +19,7 @@ U 1 1 5E5C209E
 P 2060 3250
 F 0 "J1" H 2050 4620 50  0000 C CNN
 F 1 "uPD23C1000" H 2050 4510 50  0000 C CNN
-F 2 "000_LOCAL:DIP-28_W15.24mm_pcb_sil_pins" H 2060 3250 50  0001 C CNN
+F 2 "000_LOCAL:DIP28_0.6_pcb_sil_pins" H 2060 3250 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc0014.pdf" H 2060 3250 50  0001 C CNN
 	1    2060 3250
 	1    0    0    -1  
@@ -873,6 +873,14 @@ Wire Bus Line
 	7540 5660 7780 5660
 Wire Bus Line
 	5520 5660 5770 5660
+Text Notes 1780 1700 0    50   ~ 0
+DIP28 legs
+Text Notes 4250 1680 0    50   ~ 0
+8x20mm TSOP32
+Text Notes 6270 1700 0    50   ~ 0
+8x14mm TSOP32
+Text Notes 8360 1720 0    50   ~ 0
+7x9pin PLCC32
 Wire Bus Line
 	5520 2200 5520 5660
 Wire Bus Line
@@ -889,12 +897,4 @@ Wire Bus Line
 	7780 2050 7780 5660
 Wire Bus Line
 	1140 2050 1140 5660
-Text Notes 1780 1700 0    50   ~ 0
-DIP28 legs
-Text Notes 4250 1680 0    50   ~ 0
-8x20mm TSOP32
-Text Notes 6270 1700 0    50   ~ 0
-8x14mm TSOP32
-Text Notes 8360 1720 0    50   ~ 0
-7x9pin PLCC32
 $EndSCHEMATC

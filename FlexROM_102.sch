@@ -30,7 +30,7 @@ U 1 1 5E5C209E
 P 4260 3040
 F 0 "J1" H 4440 4190 50  0000 C CNN
 F 1 "27C256 DIP LEGS" H 4260 4420 50  0000 C CNN
-F 2 "000_LOCAL:DIP-28_W15.24mm_pcb_sil_pins" H 4260 3040 50  0001 C CNN
+F 2 "000_LOCAL:DIP28_0.6_pcb_sil_pins" H 4260 3040 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc0014.pdf" H 4260 3040 50  0001 C CNN
 	1    4260 3040
 	1    0    0    -1  
