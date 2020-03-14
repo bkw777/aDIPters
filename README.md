@@ -4,6 +4,8 @@ PCBs to plug SMT parts into DIP sockets. Generaly to use a newer PLCC, SOIC, or 
 Some method to re-program the chip after being soldered to the board is provided where possible.
 
 ## 27C256_28C256
+http://tandy.wiki/27C256_28C256
+
 Use an electrically re-programmable EEPROM (28C256) in any socket that normally takes a 256K x 8 UV EPROM (27C256) or standard pinout mask ROM.
 
 Since this board goes into a very standard socket and replaces a very standard pinout chip, there are countless places it may be used, but here are just a few:
