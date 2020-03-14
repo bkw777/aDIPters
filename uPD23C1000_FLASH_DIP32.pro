@@ -1,4 +1,4 @@
-update=22/05/2015 07:44:53
+update=Fri 13 Mar 2020 11:47:32 PM EDT
 version=1
 last_client=kicad
 [general]
@@ -31,3 +31,13 @@ NetIExt=net
 version=1
 LibDir=
 [eeschema/libraries]
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=/home/bkw/Documents/Model_T_Computers/NEC/PC-8300/FlashROM_8300/
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=50
+ERC_TestSimilarLabels=1

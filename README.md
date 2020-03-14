@@ -8,11 +8,11 @@ Use an electrically re-programmable EEPROM (28C256) in any socket that normally 
 
 Since this board goes into a very standard socket and replaces a very standard pinout chip, there are countless places it may be used, but here are just a few:
 
-:Tandy Model 102 system rom
-:Tandy Model 200 system rom
-:Tandy Model 600 system roms (several sockets)
-:NEC PC-8201 system rom
-:NEC PC-8201 option rom
+:Tandy Model 102 system rom  
+:Tandy Model 200 system rom  
+:Tandy Model 600 system roms (several sockets)  
+:NEC PC-8201 system rom  
+:NEC PC-8201 option rom  
 :NEC PC-8300 option rom
 
 The chip may be programmed by placing the board directly in a programmers' zif socket.
