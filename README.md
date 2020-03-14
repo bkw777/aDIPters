@@ -53,12 +53,11 @@ The nominal flash chip is SST39SF010, but there are several other compatible par
 * 7x9pin PLCC32, or 8x14mm TSOP32, or 8x20mm TSOP32
 
 At least the following parts work:
-* SST39SF010
-* SST29SF010
-* SST29EE010
-* GLS29SF010 - same as SST29SF010
-* GLS29EE010 - same as SST29EE010
+* 39SF010
+* 29SF010
+* 29EE010
 
 Even more parts probably work, just match the specs above.
+Several old EEPROM and even EPROM (UV/OTP) devices are even supported if you install R3.
 
 The chip may be programmed by placing the board directly in a programmers' zif socket.
