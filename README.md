@@ -41,7 +41,7 @@ Since the pinout is standard 27C256 or 256K x 8 mask rom, you could also use the
 
 A SOIC-28 test clip is required for programming.
 
-## FlashROM_8300 aka uPD23C100_FLASH
+## FlashROM_8300 aka uPD23C1000_FLASH
 http://tandy.wiki/FlashROM_8300
 
 This board uses a 5V flash chip to replace the non-standard pinout 1Mbit mask ROM in the system ROM socket (ROM0) in a NEC PC-8300.
