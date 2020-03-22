@@ -1,4 +1,4 @@
-(module TSOP32-14mm (layer F.Cu) (tedit 5E6C5054)
+(module TSOP32-14mm (layer F.Cu) (tedit 5E7004DA)
   (descr "Module CMS TSOP 32 pins")
   (tags "CMS TSOP")
   (attr smd)

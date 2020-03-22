@@ -1,4 +1,4 @@
-(module PLCC32_7x9 (layer F.Cu) (tedit 5E6C507E)
+(module PLCC32_7x9 (layer F.Cu) (tedit 5E7004E5)
   (descr "PLCC, 32 Pin (http://ww1.microchip.com/downloads/en/DeviceDoc/doc0015.pdf), generated with kicad-footprint-generator ipc_plcc_jLead_generator.py")
   (tags "PLCC LCC")
   (attr smd)
