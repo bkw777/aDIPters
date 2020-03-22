@@ -17,10 +17,10 @@ SUPPORTED CHIPS:
 Any jedec pinout, 5v, 128k x 8, parallel device.
 
 Without R3 installed, supports single-voltage devices (no Vpp pin), and some older devices with a Vpp pin that don't need it tied to Vcc or gnd when not programming. At least:  
-39SF010, 29SF010, 29EE010, NM27C010
+39SF010, 29SF010, 29EE010, 29F010, 28C010, NM27C010
 
 With R3 installed, supports all of the above, plus older devices that have a Vpp pin. At least:  
-28F010, 28C010, 27SF010, 27C010
+28F010, 27SF010, 27C010
 
 In all cases above, both the TSOP and PLCC (or CLCC!) package are supported.
 
