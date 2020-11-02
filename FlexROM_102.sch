@@ -475,13 +475,13 @@ NC_A14
 $Comp
 L 000_LOCAL:Jumper_4_Bridged23 JP2
 U 1 1 5FA17830
-P 6750 4500
-F 0 "JP2" H 6700 4350 50  0000 L CNN
-F 1 "Jumper_4_Bridged23" H 6700 4300 50  0001 L CNN
-F 2 "Connector_PinHeader_2.00mm:PinHeader_1x04_P2.00mm_Horizontal" H 6750 4500 50  0001 C CNN
-F 3 "~" H 6750 4500 50  0001 C CNN
-	1    6750 4500
-	1    0    0    -1  
+P 6750 4800
+F 0 "JP2" H 6700 4650 50  0000 L CNN
+F 1 "Jumper_4_Bridged23" H 6700 4600 50  0001 L CNN
+F 2 "000_LOCAL:PinHeader_1x04_P2.00mm_Horizontal" H 6750 4800 50  0001 C CNN
+F 3 "~" H 6750 4800 50  0001 C CNN
+	1    6750 4800
+	1    0    0    1   
 $EndComp
 Text Notes 7600 5810 2    50   ~ 0
 RUN mode (27C256 pinout on DIP legs):   1  2  3  4
