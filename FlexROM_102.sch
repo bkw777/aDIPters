@@ -160,7 +160,7 @@ A12
 Text Label 3500 3440 0    50   ~ 0
 A13
 Text Label 3500 3540 0    50   ~ 0
-A14
+A14_~WE
 Text Label 5930 2140 0    50   ~ 0
 A0
 Text Label 5930 2240 0    50   ~ 0
@@ -264,7 +264,7 @@ L 000_LOCAL:Jumper_2_Bridged JP1
 U 1 1 5E68B8A2
 P 4030 4670
 F 0 "JP1" H 3860 4740 50  0000 C CNN
-F 1 "/CS breakout (REX TP1)" H 4030 4830 50  0000 C CNN
+F 1 "~CS~ breakout (REX TP1)" H 4160 4820 50  0000 C CNN
 F 2 "000_LOCAL:Pin_Header_Angled_1x02_Pitch2.54mm" H 4030 4670 50  0001 C CNN
 F 3 "~" H 4030 4670 50  0001 C CNN
 	1    4030 4670
@@ -296,26 +296,20 @@ Wire Bus Line
 Connection ~ 5830 5540
 Wire Bus Line
 	5830 5540 7400 5540
-Entry Wire Line
-	3400 5070 3500 5170
-Entry Wire Line
-	3400 5170 3500 5270
 $Comp
 L 000_LOCAL:R_US R1
 U 1 1 5E6B3AF8
-P 4080 5270
-F 0 "R1" V 4040 4950 50  0000 C CNN
-F 1 "47K" V 4040 5100 50  0000 C CNN
-F 2 "000_LOCAL:R_0805" H 4080 5270 50  0001 C CNN
-F 3 "~" H 4080 5270 50  0001 C CNN
-	1    4080 5270
+P 6250 4900
+F 0 "R1" V 6330 4810 50  0000 C CNN
+F 1 "47K" V 6330 4970 50  0000 C CNN
+F 2 "000_LOCAL:R_0805" H 6250 4900 50  0001 C CNN
+F 3 "~" H 6250 4900 50  0001 C CNN
+	1    6250 4900
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	3500 5270 3930 5270
-Text Label 3500 5270 0    50   ~ 0
+Text Label 5930 4900 0    50   ~ 0
 VCC
-Text Label 3500 5170 0    50   ~ 0
+Text Label 5930 4800 0    50   ~ 0
 ~WE
 Connection ~ 4980 5540
 Wire Bus Line
@@ -441,10 +435,82 @@ Wire Wire Line
 Connection ~ 4230 4770
 Wire Wire Line
 	4230 4770 4230 4870
+Entry Wire Line
+	3400 3640 3500 3740
 Wire Wire Line
-	4230 5270 4230 5170
+	3860 3740 3500 3740
+Text Label 3500 3740 0    50   ~ 0
+NC_A14
+Entry Wire Line
+	5830 4400 5930 4500
+Entry Wire Line
+	5830 4500 5930 4600
+Entry Wire Line
+	5830 4600 5930 4700
+Entry Wire Line
+	5830 4700 5930 4800
+Entry Wire Line
+	5830 4800 5930 4900
 Wire Wire Line
-	3500 5170 4230 5170
+	5930 4900 6100 4900
+Wire Wire Line
+	5930 4800 6400 4800
+Wire Wire Line
+	6400 4800 6400 4900
+Wire Wire Line
+	6400 4800 6500 4800
+Connection ~ 6400 4800
+Wire Wire Line
+	5930 4700 6500 4700
+Wire Wire Line
+	5930 4600 6500 4600
+Wire Wire Line
+	5930 4500 6500 4500
+Text Label 5930 4700 0    50   ~ 0
+A14_~WE
+Text Label 5930 4600 0    50   ~ 0
+A14
+Text Label 5930 4500 0    50   ~ 0
+NC_A14
+$Comp
+L 000_LOCAL:Jumper_4_Bridged23 JP2
+U 1 1 5FA17830
+P 6750 4500
+F 0 "JP2" H 6700 4350 50  0000 L CNN
+F 1 "Jumper_4_Bridged23" H 6700 4300 50  0001 L CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x04_P2.00mm_Horizontal" H 6750 4500 50  0001 C CNN
+F 3 "~" H 6750 4500 50  0001 C CNN
+	1    6750 4500
+	1    0    0    -1  
+$EndComp
+Text Notes 7600 5810 2    50   ~ 0
+RUN mode (27C256 pinout on DIP legs):   1  2  3  4
+Text Notes 7600 5910 2    50   ~ 0
+PROGRAM mode (28C256 pinout on DIP legs):   1  2  3  4
+Wire Notes Line style solid
+	7410 5830 7410 5920
+Wire Notes Line style solid
+	7600 5830 7600 5920
+Wire Notes Line style solid
+	7410 5830 7600 5830
+Wire Notes Line style solid
+	7410 5920 7600 5920
+Wire Notes Line style solid
+	7290 5730 7290 5820
+Wire Notes Line style solid
+	7480 5730 7480 5820
+Wire Notes Line style solid
+	7290 5730 7480 5730
+Wire Notes Line style solid
+	7290 5820 7480 5820
+Wire Notes Line style solid
+	7170 5830 7170 5920
+Wire Notes Line style solid
+	7360 5830 7360 5920
+Wire Notes Line style solid
+	7170 5830 7360 5830
+Wire Notes Line style solid
+	7170 5920 7360 5920
 Wire Bus Line
 	4980 2040 4980 5540
 Wire Bus Line

@@ -6,6 +6,18 @@ K OTP UV EPROM 256 KiBit
 F http://ww1.microchip.com/downloads/en/DeviceDoc/doc0014.pdf
 $ENDCMP
 #
+$CMP Conn_01x01_Female
+D Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)
+K connector
+F ~
+$ENDCMP
+#
+$CMP Conn_01x01_Male
+D Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)
+K connector
+F ~
+$ENDCMP
+#
 $CMP Conn_01x02_Male
 D Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)
 K connector
