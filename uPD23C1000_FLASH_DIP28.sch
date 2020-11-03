@@ -4,10 +4,10 @@ EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
-Title "uPD23C1000 to FLASH"
-Date ""
+Title "29F010 to uPD23C1000"
+Date "2020-11-03"
 Rev ""
-Comp ""
+Comp "b.kenyon.w@gmail.com"
 Comment1 ""
 Comment2 ""
 Comment3 ""

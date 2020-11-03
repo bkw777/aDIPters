@@ -26,7 +26,20 @@ Use an electrically re-programmable EEPROM (28C256) in place of the non-standard
 
 With /CS signal breakout/remote loop to use with REX main rom feature. This allows reverting from REX back to the internal main rom without opening the computer again to re-install the original main rom chip.
 
-To program the eeprom, you may use either an SOIC-28 test clip, or the FlexROM_100_programming_adapter board also found here.
+To program the eeprom, use the FlexROM_100_programming_adapter also found here, or an SOIC-28 test clip.
+
+To install without REX, just install a shunt on the /CS pins.
+
+To use the REX main rom feature:  
+* Run 2 jumper wires about 10" long with female "dupont" sockets on both ends, from the /CS OUT and /CS IN pins out to the option-rom compartment.  
+* Label the /CS OUT wire so that you can tell which one it is from the option rom compartment after the machine is re-assembled. One idea is just use the wire colors to identify the /CS_OUT-TP1 wire. When installing the wires, pick a neutral black, white, or grey wire for the /CS IN wire, and pick any other color for the /CS OUT wire. Then later you only have to remember that the colored wire goes on the TP1 pin.  
+* Attach the /CS OUT wire to the TP1 pin on the REX.  
+* Leave the /CS IN wire un-connected loose in the option rom compartment.
+
+To remove a REX and re-enable the internal ROM:  
+* Disconnect the /CS OUT wire from the REX TP1 pin, and remove the REX.  
+* Use a short jumper wire with male "dupont" pins on both ends to join the /CS OUT and /CS IN wires to each other.
+
 
 ## FlexROM_102
 http://tandy.wiki/FlexROM_102
@@ -39,9 +52,9 @@ The Model 102 system ROM is soldered, so to use this requires de-soldering the o
 
 Since the pinout is standard 27C256 or 256K x 8 mask rom, you could also use the above 27C256_28C256 board for the main rom in a 102, or use this board in any other standard 27C256 or 256K x 8 mask rom socket. But if you want to use a REX in a Model 102, then this board provides the /CS remote loop to connect to REX's TP1 pin, and allow reverting from REX back to the internal ROM without opening the Model 102 case again to re-install the original main rom chip.
 
-To program the eprom, set the 4 small jumpers to PROGRAM (two shunts on the two pairs of pins), put the board in the programmer, and set the programmer for 28C256.
+To program the eeprom, set the mini jumpers to PROGRAM (two shunts on the two pairs of pins), put the board in the programmer, and set the programmer for 28C256.
 
-To install/run, set the 4 small jumpers to RUN (single shunt on the two center pins) and install in Model 102 in place of the main rom.
+To install/run, set the mini jumpers to RUN (single shunt on the two center pins), and install in the Model 102 in place of the main rom.
 
 To use the REX main rom feature, run 2 female dupont jumper wires from the /CS OUT and /CD IN pin out to the option-rom compartment. Label the /CS OUT wire. Attach the /CS OUT wire to TP1 on the REX.
 
