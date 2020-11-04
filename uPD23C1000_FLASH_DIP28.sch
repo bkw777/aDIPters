@@ -207,7 +207,7 @@ L 000_LOCAL:SST39SF010_TSOP U1
 U 1 1 5E5D9957
 P 4680 2850
 F 0 "U1" H 4680 4450 50  0000 C CNN
-F 1 "29F0x0 (TSOP)" H 4680 4350 50  0000 C CNN
+F 1 "29F010 TSOP-32 20mm" H 4680 4350 50  0000 C CNN
 F 2 "000_LOCAL:TSOP32-20mm" H 4680 3150 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/25022B.pdf" H 4680 3150 50  0001 C CNN
 	1    4680 2850
@@ -546,7 +546,7 @@ L 000_LOCAL:SST39SF010_TSOP U2
 U 1 1 5E618FF4
 P 6700 2850
 F 0 "U2" H 6700 4450 50  0000 C CNN
-F 1 "29F0x0 (TSOP)" H 6700 4350 50  0000 C CNN
+F 1 "29F010 sTSOP-32 14mm" H 6700 4350 50  0000 C CNN
 F 2 "000_LOCAL:TSOP32-14mm" H 6700 3150 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/25022B.pdf" H 6700 3150 50  0001 C CNN
 	1    6700 2850
@@ -745,7 +745,7 @@ L 000_LOCAL:SST39SF010_PLCC U3
 U 1 1 5E644E99
 P 8710 2850
 F 0 "U3" H 8710 4450 50  0000 C CNN
-F 1 "29F0x0 (PLCC)" H 8710 4350 50  0000 C CNN
+F 1 "29F010 PLCC-32 7x9" H 8710 4350 50  0000 C CNN
 F 2 "000_LOCAL:PLCC32_7x9" H 8710 3150 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/25022B.pdf" H 8710 3150 50  0001 C CNN
 	1    8710 2850
@@ -875,14 +875,6 @@ Wire Bus Line
 	5580 5010 5830 5010
 Text Notes 1870 1120 0    50   ~ 0
 DIP-28 legs
-Text Notes 4360 1150 0    50   ~ 0
-TSOP-32 20mm
-Text Notes 6360 1150 0    50   ~ 0
-sTSOP-32 14mm
-Text Notes 8430 1150 0    50   ~ 0
-PLCC-32 7x9
-Text Notes 5010 6360 0    50   ~ 0
-U1 or U2 or U3: flash memory, 128K x 8, parallel, 5v\nExamples: SST39SF010, GLS29EE010, AM29F010\n\nOPTIONAL: If necessary, xxx020 part may be used in place of xxx010\nNormally: Install R1 and ex: SST39SF010\nAlternate: Install R1, R2, and ex: SST39SF020\n\nIn either case, only 128K of the chip is used.\nIn either case, configure the programmer for the xxx010 part, which may require overriding the detected chip ID.\n\nxxx040 part may not be used because DIP pin 28 is hard-wired and can't be switched from VCC to A18.\nThere is room to add another pullup resistor needed for A18,\nbut there is no room to add another 3-pin jumper like J3 to switch DIP pin 28 between VCC and A18.\n
 Text Notes 1200 6840 0    50   ~ 0
 J2, J3: RUN vs PROGRAM configuration\n\nRUN configuration - for normal operation:\n* Install a jumper on J2\n* Install jumper on J3 in the A16 position\n\nPROGRAM configuration - for writing to the flash chip:\n* Remove the jumper from J2\n* Move the J3 jumper to the ~OE~ position\n* Insert the board into the programmer's ZIF socket, 2 rows away from the top.\nDon't close the ZIF clamping lever yet.\n* Connect J2 VCC to ZIF pin 32. (*)\n* Connect J2 ~WE~ to ZIF pin 31.\n* Connect J3 A16 to ZIF pin 2.\n* Close the ZIF clamping lever\n\n(*) Common "dupont" male-female jumper wires\nhave a female end that can slide onto to the J2 & J3 pins,\nand a male end that can insert into the ZIF socket.\n
 Text Label 5280 3950 0    50   ~ 0
@@ -907,40 +899,32 @@ Text Label 5930 4550 0    50   ~ 0
 GND
 Entry Wire Line
 	5830 4450 5930 4550
-$Comp
-L 000_LOCAL:R_US R2
-U 1 1 5FB60C5B
-P 6490 4550
-F 0 "R2" V 6450 4260 50  0000 C CNN
-F 1 "47k" V 6450 4390 50  0000 C CNN
-F 2 "000_LOCAL:R_0805" V 6530 4540 50  0001 C CNN
-F 3 "~" H 6490 4550 50  0001 C CNN
-	1    6490 4550
-	0    1    1    0   
-$EndComp
 Entry Wire Line
 	5830 4350 5930 4450
 Wire Wire Line
-	5930 4450 6640 4450
+	5930 4450 6300 4450
 Text Label 5930 4450 0    50   ~ 0
 A17
 Wire Wire Line
-	5930 4550 6340 4550
+	5930 4550 6100 4550
 Wire Wire Line
-	6640 4550 6640 4450
-Wire Notes Line
-	6710 4340 5890 4340
-Text Notes 6100 4320 0    50   ~ 0
-OPTIONAL
+	6300 4550 6300 4450
 NoConn ~ 7300 3850
 NoConn ~ 9310 3850
 NoConn ~ 5280 3850
-Wire Notes Line
-	5890 4340 5890 4630
-Wire Notes Line
-	5890 4630 6710 4630
-Wire Notes Line
-	6710 4630 6710 4340
+Text Notes 5360 5690 0    50   ~ 0
+U1 or U2 or U3: flash memory, 128K x 8, parallel, 5v\nExamples: SST39SF010, GLS29EE010, AM29F010\n\nIf necessary, 256K xxx020 part may be used in place of 128K xxx010 part.\nxxx040 part may not be used.\n
+$Comp
+L 000_LOCAL:Net-Tie_2 NT1
+U 1 1 5FA78AD5
+P 6200 4550
+F 0 "NT1" H 6200 4600 50  0000 C CNN
+F 1 "Net-Tie_2" H 6200 4500 50  0000 C CNN
+F 2 "000_LOCAL:NetTie-2_SMD_0.18mm" H 6200 4550 50  0001 C CNN
+F 3 "~" H 6200 4550 50  0001 C CNN
+	1    6200 4550
+	1    0    0    -1  
+$EndComp
 Wire Bus Line
 	5580 1550 5580 5010
 Wire Bus Line

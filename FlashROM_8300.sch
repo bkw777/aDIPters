@@ -206,8 +206,8 @@ $Comp
 L 000_LOCAL:SST39SF010_TSOP U1
 U 1 1 5E5D9957
 P 4620 3500
-F 0 "U1" H 4620 5100 50  0000 C CNN
-F 1 "GLS29EE010 (TSOP)" H 4620 5000 50  0000 C CNN
+F 0 "U1" H 4620 5130 50  0000 C CNN
+F 1 "29F010 TSOP-32 20mm" H 4620 5030 50  0000 C CNN
 F 2 "000_LOCAL:TSOP32-20mm" H 4620 3800 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/25022B.pdf" H 4620 3800 50  0001 C CNN
 	1    4620 3500
@@ -500,8 +500,8 @@ $Comp
 L 000_LOCAL:SST39SF010_TSOP U2
 U 1 1 5E618FF4
 P 6640 3500
-F 0 "U2" H 6640 5100 50  0000 C CNN
-F 1 "SST39SF010 (TSOP)" H 6640 5000 50  0000 C CNN
+F 0 "U2" H 6640 5130 50  0000 C CNN
+F 1 "29F010 sTSOP-32 14mm" H 6640 5030 50  0000 C CNN
 F 2 "000_LOCAL:TSOP32-14mm" H 6640 3800 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/25022B.pdf" H 6640 3800 50  0001 C CNN
 	1    6640 3500
@@ -691,8 +691,8 @@ $Comp
 L 000_LOCAL:SST39SF010_PLCC U3
 U 1 1 5E644E99
 P 8650 3500
-F 0 "U3" H 8650 5100 50  0000 C CNN
-F 1 "SST39SF010 / GLS29EE010 (PLCC)" H 8650 5000 50  0000 C CNN
+F 0 "U3" H 8650 5130 50  0000 C CNN
+F 1 "29F010 PLCC 7x9" H 8650 5030 50  0000 C CNN
 F 2 "000_LOCAL:PLCC32_7x9" H 8650 3800 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/25022B.pdf" H 8650 3800 50  0001 C CNN
 	1    8650 3500
@@ -812,12 +812,6 @@ Wire Wire Line
 	7880 2150 8650 2150
 Text Notes 1860 1720 0    50   ~ 0
 DIP32 legs\nswitchable pinout
-Text Notes 4250 1680 0    50   ~ 0
-8x20mm TSOP32
-Text Notes 6270 1700 0    50   ~ 0
-8x14mm TSOP32
-Text Notes 8360 1720 0    50   ~ 0
-7x9pin PLCC32
 Wire Wire Line
 	2790 2300 3220 2300
 Wire Wire Line
@@ -904,24 +898,6 @@ Wire Wire Line
 Text Label 3220 4500 2    50   ~ 0
 VPP
 Entry Wire Line
-	5420 4500 5520 4400
-Wire Wire Line
-	5420 4500 5220 4500
-Text Label 5420 4500 2    50   ~ 0
-VPP
-Entry Wire Line
-	7440 4500 7540 4400
-Wire Wire Line
-	7440 4500 7240 4500
-Text Label 7440 4500 2    50   ~ 0
-VPP
-Entry Wire Line
-	9450 4500 9550 4400
-Wire Wire Line
-	9450 4500 9250 4500
-Text Label 9450 4500 2    50   ~ 0
-VPP
-Entry Wire Line
 	1170 5050 1270 5150
 Entry Wire Line
 	1170 5150 1270 5250
@@ -946,24 +922,55 @@ Wire Wire Line
 	1270 5150 2040 5150
 Wire Wire Line
 	2040 5250 2040 5150
-Text Notes 1360 6710 0    50   ~ 0
-R3 only needed for devices with VPP.
-Text Notes 1360 6780 0    50   ~ 0
-Not needed for 39SF010, 29SF010, 29EE010.
-Wire Bus Line
-	5520 2200 5520 6420
-Wire Bus Line
-	7540 2200 7540 6420
+Text Notes 1270 6760 0    50   ~ 0
+OPTIONAL:\nR3 only needed for devices with VPP. 28C010, 27C010, etc.\nNot needed for 29F010, 39SF010, 29EE010, etc.
+Wire Notes Line
+	1230 5020 1230 5340
+Wire Notes Line
+	1230 5340 2100 5340
+Wire Notes Line
+	2100 5340 2100 5020
+Wire Notes Line
+	2100 5020 1230 5020
+Text Notes 1490 4990 0    50   ~ 0
+OPTIONAL
+Wire Wire Line
+	9450 4500 9250 4500
+Text Label 9450 4500 2    50   ~ 0
+VPP
+Entry Wire Line
+	9450 4500 9550 4400
+Wire Wire Line
+	5420 4500 5220 4500
+Text Label 5420 4500 2    50   ~ 0
+VPP
+Entry Wire Line
+	5420 4500 5520 4400
+Entry Wire Line
+	7440 4500 7540 4400
+Wire Wire Line
+	7440 4500 7240 4500
+Text Label 7440 4500 2    50   ~ 0
+VPP
+NoConn ~ 9250 4600
+NoConn ~ 7240 4600
+NoConn ~ 5220 4600
 Wire Bus Line
 	9550 2200 9550 6420
 Wire Bus Line
+	7540 2200 7540 6420
+Wire Bus Line
+	5520 2200 5520 6420
+Wire Bus Line
 	3320 2200 3320 6420
-Wire Bus Line
-	3750 2050 3750 6420
-Wire Bus Line
-	5770 2050 5770 6420
 Wire Bus Line
 	7780 2050 7780 6420
 Wire Bus Line
+	5770 2050 5770 6420
+Wire Bus Line
+	3750 2050 3750 6420
+Wire Bus Line
 	1170 2050 1170 6420
+Text Notes 1280 6990 0    50   ~ 0
+xxx020 or xxx040 part may not be installed in place of xxx010
 $EndSCHEMATC

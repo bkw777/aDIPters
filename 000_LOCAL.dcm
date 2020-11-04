@@ -54,6 +54,12 @@ K Jumper SPDT
 F ~
 $ENDCMP
 #
+$CMP Net-Tie_2
+D Net tie, 2 pins
+K net tie short
+F ~
+$ENDCMP
+#
 $CMP R_US
 D Resistor, US symbol
 K R res resistor
