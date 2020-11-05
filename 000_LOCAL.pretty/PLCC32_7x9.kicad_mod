@@ -1,4 +1,4 @@
-(module PLCC32_7x9 (layer F.Cu) (tedit 5F9708DD)
+(module PLCC32_7x9 (layer F.Cu) (tedit 5FA39D00)
   (descr "PLCC, 32 Pin (http://ww1.microchip.com/downloads/en/DeviceDoc/doc0015.pdf), generated with kicad-footprint-generator ipc_plcc_jLead_generator.py")
   (tags "PLCC LCC")
   (attr smd)
@@ -82,9 +82,9 @@
   (pad 30 smd roundrect (at 3.81 -6.8375) (size 0.6 1.475) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
   (pad 31 smd roundrect (at 2.54 -6.8375) (size 0.6 1.475) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
   (pad 32 smd roundrect (at 1.27 -6.8375) (size 0.6 1.475) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-  (model ${KIPRJMOD}/000_LOCAL.pretty/packages3d/PLCC32_7x9.step_x
-    (offset (xyz 0 0 0.2))
+  (model ${KIPRJMOD}/000_LOCAL.pretty/packages3d/PLCC32_7x9.step
+    (offset (xyz 0 0 2.9))
     (scale (xyz 1 1 1))
-    (rotate (xyz 0 0 0))
+    (rotate (xyz -90 0 180))
   )
 )

@@ -18,7 +18,7 @@ L 000_LOCAL:28C256 U1
 U 1 1 5E5B130A
 P 6670 3040
 F 0 "U1" H 6810 4160 50  0000 C CNN
-F 1 "28C256 pins to programmer" H 6670 4350 50  0000 C CNN
+F 1 "28C256 pinout to programmer" H 6670 4350 50  0000 C CNN
 F 2 "000_LOCAL:2x28_0.3_0.1_pins" H 6670 3040 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc0006.pdf" H 6670 3040 50  0001 C CNN
 	1    6670 3040
@@ -128,11 +128,11 @@ A0
 Text Label 3500 3840 0    50   ~ 0
 ~OE
 Text Label 3500 3940 0    50   ~ 0
-~CS_OUT
+~CE
 Text Label 5930 3840 0    50   ~ 0
 ~OE
 Text Label 5930 3940 0    50   ~ 0
-~CS_IN
+~CE
 Text Label 3500 2240 0    50   ~ 0
 A1
 Text Label 3500 2340 0    50   ~ 0
@@ -255,17 +255,11 @@ Text Label 7300 2740 2    50   ~ 0
 D6
 Text Label 7300 2840 2    50   ~ 0
 D7
-Text Notes 4110 3770 0    50   ~ 0
-(ALE)
 Wire Bus Line
 	3400 5540 4980 5540
 Connection ~ 5830 5540
 Wire Bus Line
 	5830 5540 7400 5540
-Entry Wire Line
-	5830 4400 5930 4500
-Text Label 5930 4500 0    50   ~ 0
-~WE
 Connection ~ 4980 5540
 Wire Bus Line
 	4980 5540 5830 5540
@@ -381,20 +375,12 @@ Wire Wire Line
 	7070 2740 7300 2740
 Wire Wire Line
 	7070 2840 7300 2840
-$Comp
-L 000_LOCAL:Conn_01x01_Male J2
-U 1 1 5FA33369
-P 6330 4500
-F 0 "J2" H 6230 4500 50  0000 L CNN
-F 1 "~WE~" H 6100 4490 50  0000 L CNN
-F 2 "000_LOCAL:Pin_1x1" H 6330 4500 50  0001 C CNN
-F 3 "~" H 6330 4500 50  0001 C CNN
-	1    6330 4500
-	-1   0    0    -1  
-$EndComp
-NoConn ~ 3860 3740
+Entry Wire Line
+	3400 3640 3500 3740
 Wire Wire Line
-	5930 4500 6130 4500
+	3860 3740 3500 3740
+Text Label 3500 3740 0    50   ~ 0
+~WE
 Wire Bus Line
 	4980 2040 4980 5540
 Wire Bus Line
