@@ -9,7 +9,14 @@
     (nets 31)
   )
 
-  (page A4)
+  (page USLetter)
+  (title_block
+    (title "28C256 SOIC to 27C256 DIP")
+    (date 2020-11-23)
+    (rev 002)
+    (company "Bran. K. White - b.kenyon.w@gmail.com")
+  )
+
   (layers
     (0 F.Cu signal)
     (31 B.Cu signal)
@@ -70,7 +77,7 @@
     (visible_elements FFFFFF7F)
     (pcbplotparams
       (layerselection 0x010fc_ffffffff)
-      (usegerberextensions false)
+      (usegerberextensions true)
       (usegerberattributes false)
       (usegerberadvancedattributes false)
       (creategerberjobfile false)
@@ -89,12 +96,12 @@
       (plotvalue true)
       (plotinvisibletext false)
       (padsonsilk false)
-      (subtractmaskfromsilk false)
+      (subtractmaskfromsilk true)
       (outputformat 1)
       (mirror false)
-      (drillshape 1)
+      (drillshape 0)
       (scaleselection 1)
-      (outputdirectory ""))
+      (outputdirectory "GERBER_28C256_to_27C256"))
   )
 
   (net 0 "")

@@ -4,10 +4,10 @@ EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
-Title "28C256 SOIC to LH535618 DIP"
-Date ""
+Title "28C256 pins to LH535618 socket"
+Date "2020-11-23"
 Rev ""
-Comp ""
+Comp "Brian K. White - b.kenyon.w@gmail.com"
 Comment1 "TRS-80 Model 100 system rom M12"
 Comment2 "With REX main ROM support"
 Comment3 ""

@@ -5,11 +5,11 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "28C256 SOIC to LH535618 DIP"
-Date ""
-Rev ""
-Comp ""
+Date "2020-11-23"
+Rev "002"
+Comp "Brian K. White - b.kenyon.w@gmail.com"
 Comment1 "TRS-80 Model 100 system rom M12"
-Comment2 "With REX main ROM support"
+Comment2 "Support REX main rom feature"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -256,76 +256,43 @@ D6
 Text Label 7300 2840 2    50   ~ 0
 D7
 Entry Wire Line
-	3400 4570 3500 4670
+	3600 4700 3700 4800
 Entry Wire Line
-	3400 4670 3500 4770
+	3600 4800 3700 4900
 $Comp
 L 000_LOCAL:Jumper_2_Bridged JP1
 U 1 1 5E68B8A2
-P 4020 4670
-F 0 "JP1" H 4020 4750 50  0000 C CNN
-F 1 "~CS~ breakout (REX TP1)" H 4020 4830 50  0000 C CNN
-F 2 "000_LOCAL:Pin_Header_Angled_1x02_Pitch2.54mm" H 4020 4670 50  0001 C CNN
-F 3 "~" H 4020 4670 50  0001 C CNN
-	1    4020 4670
+P 4220 4800
+F 0 "JP1" H 4220 4880 50  0000 C CNN
+F 1 "~CS~ breakout" H 4220 4960 50  0000 C CNN
+F 2 "000_LOCAL:Pin_Header_Angled_1x02_Pitch2.54mm" H 4220 4800 50  0001 C CNN
+F 3 "~" H 4220 4800 50  0001 C CNN
+	1    4220 4800
 	-1   0    0    -1  
 $EndComp
 Entry Wire Line
-	3400 4770 3500 4870
+	3600 4900 3700 5000
 $Comp
 L 000_LOCAL:R_US R2
 U 1 1 5E68C7F8
-P 4080 4870
-F 0 "R2" V 4040 4550 50  0000 C CNN
-F 1 "47K" V 4040 4700 50  0000 C CNN
-F 2 "000_LOCAL:R_0805" H 4080 4870 50  0001 C CNN
-F 3 "~" H 4080 4870 50  0001 C CNN
-	1    4080 4870
+P 4280 5000
+F 0 "R2" V 4240 4680 50  0000 C CNN
+F 1 "47K" V 4240 4830 50  0000 C CNN
+F 2 "000_LOCAL:R_0805" H 4280 5000 50  0001 C CNN
+F 3 "~" H 4280 5000 50  0001 C CNN
+	1    4280 5000
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3500 4670 3820 4670
-Text Label 3500 4670 0    50   ~ 0
+	3700 4800 4020 4800
+Text Label 3700 4800 0    50   ~ 0
 ~CS_OUT
 Wire Wire Line
-	3500 4870 3930 4870
-Text Label 3500 4770 0    50   ~ 0
+	3700 5000 4130 5000
+Text Label 3700 4900 0    50   ~ 0
 ~CS_IN
-Text Label 3500 4870 0    50   ~ 0
+Text Label 3700 5000 0    50   ~ 0
 VCC
-Wire Bus Line
-	3400 5540 4980 5540
-Connection ~ 5830 5540
-Wire Bus Line
-	5830 5540 7400 5540
-Entry Wire Line
-	3400 5070 3500 5170
-Entry Wire Line
-	3400 5170 3500 5270
-$Comp
-L 000_LOCAL:R_US R1
-U 1 1 5E6B3AF8
-P 4080 5270
-F 0 "R1" V 4030 4900 50  0000 C CNN
-F 1 "47K" V 4030 5040 50  0000 C CNN
-F 2 "000_LOCAL:R_0805" H 4080 5270 50  0001 C CNN
-F 3 "~" H 4080 5270 50  0001 C CNN
-	1    4080 5270
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3500 5270 3930 5270
-Wire Wire Line
-	4230 5270 4230 5170
-Text Label 3500 5270 0    50   ~ 0
-VCC
-Text Label 3500 5170 0    50   ~ 0
-~WE
-Connection ~ 4980 5540
-Wire Bus Line
-	4980 5540 5830 5540
-Wire Bus Line
-	5830 5540 6590 5540
 Wire Wire Line
 	3500 1940 4260 1940
 Wire Wire Line
@@ -437,30 +404,96 @@ Wire Wire Line
 Wire Wire Line
 	7070 2840 7300 2840
 Wire Wire Line
-	4360 4670 4360 4770
+	4560 4800 4560 4900
 Wire Wire Line
-	4230 4870 4360 4870
+	4430 5000 4560 5000
 Wire Wire Line
-	3500 4770 4360 4770
-Connection ~ 4360 4770
+	3700 4900 4560 4900
+Connection ~ 4560 4900
 Wire Wire Line
-	4360 4770 4360 4870
+	4560 4900 4560 5000
 Wire Wire Line
-	4360 4670 4220 4670
-Wire Wire Line
-	3500 5170 4230 5170
+	4560 4800 4420 4800
 Entry Wire Line
 	3400 3640 3500 3740
 Wire Wire Line
 	3500 3740 3860 3740
+Connection ~ 4980 4300
 Wire Bus Line
-	4980 2040 4980 5540
+	4980 4300 5830 4300
+Connection ~ 5830 4300
 Wire Bus Line
-	7400 2040 7400 5540
-Wire Bus Line
-	5830 1840 5830 5540
-Wire Bus Line
-	3400 1840 3400 5540
-Text Label 3500 3740 0    50   ~ 0
+	5830 4300 7400 4300
+Entry Wire Line
+	3600 5400 3700 5500
+Entry Wire Line
+	3600 5500 3700 5600
+$Comp
+L 000_LOCAL:Jumper_2_Bridged JP2
+U 1 1 5FBFB30E
+P 4220 5500
+F 0 "JP2" H 4220 5580 50  0000 C CNN
+F 1 "PROGRAM" H 4220 5660 50  0000 C CNN
+F 2 "000_LOCAL:Pin_Header_Angled_1x02_Pitch2.54mm" H 4220 5500 50  0001 C CNN
+F 3 "~" H 4220 5500 50  0001 C CNN
+	1    4220 5500
+	-1   0    0    -1  
+$EndComp
+Entry Wire Line
+	3600 5600 3700 5700
+$Comp
+L 000_LOCAL:R_US R1
+U 1 1 5FBFB319
+P 4280 5700
+F 0 "R1" V 4240 5380 50  0000 C CNN
+F 1 "47K" V 4240 5530 50  0000 C CNN
+F 2 "000_LOCAL:R_0805" H 4280 5700 50  0001 C CNN
+F 3 "~" H 4280 5700 50  0001 C CNN
+	1    4280 5700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3700 5500 4020 5500
+Wire Wire Line
+	3700 5700 4130 5700
+Text Label 3700 5600 0    50   ~ 0
 ~WE
+Text Label 3700 5700 0    50   ~ 0
+VCC
+Wire Wire Line
+	4560 5500 4560 5600
+Wire Wire Line
+	4430 5700 4560 5700
+Wire Wire Line
+	3700 5600 4560 5600
+Connection ~ 4560 5600
+Wire Wire Line
+	4560 5600 4560 5700
+Wire Wire Line
+	4560 5500 4420 5500
+Wire Bus Line
+	3400 4300 3600 4300
+Connection ~ 3600 4300
+Wire Bus Line
+	3600 4300 4980 4300
+Text Notes 4640 5630 0    50   ~ 0
+RUN: open\nPROGRAM: closed
+Text Notes 4640 4930 0    50   ~ 0
+Main ROM\nInternal: closed\nREX: open, ~CS_OUT~ to REX TP1\n
+Text Notes 760  7680 0    50   ~ 0
+ALE is connected to the original non-standard system ROM,\nconnected to a 2nd ~CE~ to disable the chip when ALE is high,\nbut no common devices have such a pin.\n\nALE should be left not-connected during normal read-only\noperation with a standard part like 28C256.\nThe normal ~OE~ and ~CS~ signals suffice to enable\n& disable the part at the right times.\n\nFor programming, JP2 is closed and the programming adapter\nuses the ALE pin for ~WE~.
+Text Label 3700 5500 0    50   ~ 0
+ALE
+Text Label 3500 3740 0    50   ~ 0
+ALE
+Wire Bus Line
+	3600 4300 3600 5600
+Wire Bus Line
+	7400 2040 7400 4300
+Wire Bus Line
+	4980 2040 4980 4300
+Wire Bus Line
+	3400 1840 3400 4300
+Wire Bus Line
+	5830 1840 5830 4300
 $EndSCHEMATC

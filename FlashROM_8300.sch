@@ -5,8 +5,8 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "Flash-based uPD23C1000 replacement"
-Date "2020-11-02"
-Rev ""
+Date "2020-11-23"
+Rev "002"
 Comp "b.kenyon.w@gmail.com"
 Comment1 "DIP-32 version"
 Comment2 ""
@@ -955,6 +955,8 @@ VPP
 NoConn ~ 9250 4600
 NoConn ~ 7240 4600
 NoConn ~ 5220 4600
+Text Notes 1280 6990 0    50   ~ 0
+xxx020 or xxx040 part may not be installed in place of xxx010
 Wire Bus Line
 	9550 2200 9550 6420
 Wire Bus Line
@@ -971,6 +973,4 @@ Wire Bus Line
 	3750 2050 3750 6420
 Wire Bus Line
 	1170 2050 1170 6420
-Text Notes 1280 6990 0    50   ~ 0
-xxx020 or xxx040 part may not be installed in place of xxx010
 $EndSCHEMATC

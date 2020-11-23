@@ -5,9 +5,9 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "28C256 SOIC to LH535618 DIP"
-Date ""
+Date "2020-11-23"
 Rev ""
-Comp ""
+Comp "Brian K. White - b.kenyon.w@gmail.com"
 Comment1 "TRS-80 Model 100 system rom M12"
 Comment2 "With REX main ROM support"
 Comment3 ""
@@ -240,7 +240,7 @@ L 000_LOCAL:Jumper_2_Bridged JP1
 U 1 1 5E68B8A2
 P 3500 4830
 F 0 "JP1" H 3500 4910 50  0000 C CNN
-F 1 "~CS~ breakout (REX TP1)" H 3500 4990 50  0000 C CNN
+F 1 "~CS~ breakout" H 3500 4990 50  0000 C CNN
 F 2 "000_LOCAL:Pin_Header_Angled_1x02_Pitch2.54mm" H 3500 4830 50  0001 C CNN
 F 3 "~" H 3500 4830 50  0001 C CNN
 	1    3500 4830
@@ -263,21 +263,17 @@ Text Label 3100 4930 0    50   ~ 0
 ~CS_IN
 Wire Bus Line
 	3000 5700 4580 5700
-Entry Wire Line
-	3000 5100 3100 5200
 $Comp
 L 000_LOCAL:R_US R1
 U 1 1 5E6B3AF8
-P 3350 5200
-F 0 "R1" V 3260 5050 50  0000 C CNN
-F 1 "47K" V 3260 5200 50  0000 C CNN
-F 2 "000_LOCAL:R_0805" H 3350 5200 50  0001 C CNN
-F 3 "~" H 3350 5200 50  0001 C CNN
-	1    3350 5200
+P 3850 5300
+F 0 "R1" V 3760 5150 50  0000 C CNN
+F 1 "47K" V 3760 5300 50  0000 C CNN
+F 2 "000_LOCAL:R_0805" H 3850 5300 50  0001 C CNN
+F 3 "~" H 3850 5300 50  0001 C CNN
+	1    3850 5300
 	0    -1   -1   0   
 $EndComp
-Text Label 3100 5200 0    50   ~ 0
-~WE
 Wire Wire Line
 	3100 2300 3460 2300
 Wire Wire Line
@@ -420,12 +416,12 @@ $EndComp
 $Comp
 L power:VCC #PWR0104
 U 1 1 5FAA9518
-P 3500 5200
-F 0 "#PWR0104" H 3500 5050 50  0001 C CNN
-F 1 "VCC" V 3540 5330 50  0000 L CNN
-F 2 "" H 3500 5200 50  0001 C CNN
-F 3 "" H 3500 5200 50  0001 C CNN
-	1    3500 5200
+P 4000 5300
+F 0 "#PWR0104" H 4000 5150 50  0001 C CNN
+F 1 "VCC" V 4040 5430 50  0000 L CNN
+F 2 "" H 4000 5300 50  0001 C CNN
+F 3 "" H 4000 5300 50  0001 C CNN
+	1    4000 5300
 	0    1    1    0   
 $EndComp
 $Comp
@@ -509,7 +505,7 @@ $EndComp
 Entry Wire Line
 	3000 3800 3100 3900
 Text Label 3100 3900 0    50   ~ 0
-~WE
+ALE
 Wire Wire Line
 	3100 3900 3460 3900
 Wire Wire Line
@@ -517,8 +513,32 @@ Wire Wire Line
 Wire Wire Line
 	3100 4930 3700 4930
 Connection ~ 3700 4830
+Entry Wire Line
+	3000 5200 3100 5300
+Entry Wire Line
+	3000 5300 3100 5400
+$Comp
+L 000_LOCAL:Jumper_2_Bridged JP2
+U 1 1 5FBC3795
+P 3500 5300
+F 0 "JP2" H 3500 5380 50  0000 C CNN
+F 1 "Write-Enable" H 3500 5460 50  0000 C CNN
+F 2 "000_LOCAL:Pin_Header_Angled_1x02_Pitch2.54mm" H 3500 5300 50  0001 C CNN
+F 3 "~" H 3500 5300 50  0001 C CNN
+	1    3500 5300
+	-1   0    0    -1  
+$EndComp
+Text Label 3100 5300 0    50   ~ 0
+ALE
+Text Label 3100 5400 0    50   ~ 0
+~WE
 Wire Wire Line
-	3100 5200 3200 5200
+	3700 5300 3700 5400
+Wire Wire Line
+	3100 5300 3300 5300
+Wire Wire Line
+	3100 5400 3700 5400
+Connection ~ 3700 5300
 Wire Bus Line
 	7770 2200 7770 5700
 Wire Bus Line

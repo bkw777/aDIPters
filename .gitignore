@@ -3,3 +3,4 @@ fp-info-cache
 *.kicad_pcb-bak
 *.bck
 *.sch-bak
+GERBER_*

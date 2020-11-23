@@ -5,11 +5,11 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "28C256 SOIC to 27C256 DIP"
-Date ""
+Date "2020-11-23"
 Rev ""
-Comp ""
+Comp "Brian K. White - b.kenyon.w@gmail.com"
 Comment1 "TRS-80 Model 102 system rom M12"
-Comment2 "With REX main ROM support"
+Comment2 "Support REX main rom feature"
 Comment3 ""
 Comment4 ""
 $EndDescr

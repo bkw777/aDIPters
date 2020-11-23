@@ -5,9 +5,9 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "29F010 to uPD23C1000"
-Date "2020-11-03"
-Rev ""
-Comp "b.kenyon.w@gmail.com"
+Date "2020-11-23"
+Rev "002"
+Comp "Brian K. White - b.kenyon.w@gmail.com"
 Comment1 ""
 Comment2 ""
 Comment3 ""
