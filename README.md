@@ -1,12 +1,7 @@
 # aDIPters
-This is a collection of different adapter PCBs to plug SMT parts into DIP sockets.  
+This is a collection of different adapter PCBs to plug SMT parts into DIP sockets, and/or to use a writable part in place of an originally read-only part.
 Generaly to use a newer PLCC, SOIC, or TSOP EEPROM or Flash part to replace a DIP mask ROM or UV EPROM in a vintage computer.
 
-<<<<<<< Updated upstream
-Some method to re-program the chip after being soldered to the board is provided where possible.
-
-=======
->>>>>>> Stashed changes
 ## 28C256_to_27C256
 http://tandy.wiki/28C256_to_27C256
 
