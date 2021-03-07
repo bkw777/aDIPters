@@ -380,8 +380,6 @@ NoConn ~ 7300 4340
 NoConn ~ 7300 4440
 Wire Bus Line
 	4980 5540 7630 5540
-Text Notes 4440 6170 0    50   ~ 0
-FlashROM_100 programming adapter.\n\nPlace this board into programmer.\nPlace FlashROM_100 into the DIP-28 socket.\nInstall a shunt onto the PROGRAM pins.\n\nThis for the 29F010 FlashROM_100, not the 28C256 FlexROM_100.
 Wire Bus Line
 	4980 2040 4980 5540
 Wire Bus Line
@@ -390,4 +388,8 @@ Wire Bus Line
 	3400 1840 3400 5540
 Wire Bus Line
 	5830 1890 5830 5540
+Text Notes 700  7350 0    50   ~ 0
+FlashROM_100 programming adapter.\n\nPlace this board into programmer.\nPlace FlashROM_100 into the DIP-28 socket.\nInstall jumpers on the ~CS~ and PROGRAM pins.\n\nThis for the 29F010 FlashROM_100, not the 28C256 FlexROM_100.
+Text Notes 680  7560 0    50   ~ 0
+2 address lines are not connected (32k vs 128k), so there will always be size mismatch and write verification errors when programming.
 $EndSCHEMATC

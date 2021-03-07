@@ -108,11 +108,11 @@ A0
 Text Label 3100 4000 0    50   ~ 0
 ~OE
 Text Label 3100 4100 0    50   ~ 0
-~CS_OUT
+~CS_BUS
 Text Label 5900 4600 0    50   ~ 0
 ~OE
 Text Label 5900 4500 0    50   ~ 0
-~CS_IN
+~CS
 Text Label 3100 2400 0    50   ~ 0
 A1
 Text Label 3100 2500 0    50   ~ 0
@@ -258,9 +258,9 @@ F 3 "~" H 3850 4830 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Text Label 3100 4830 0    50   ~ 0
-~CS_OUT
+~CS_BUS
 Text Label 3100 4930 0    50   ~ 0
-~CS_IN
+~CS
 Wire Bus Line
 	3000 5700 4580 5700
 $Comp
@@ -505,7 +505,7 @@ $EndComp
 Entry Wire Line
 	3000 3800 3100 3900
 Text Label 3100 3900 0    50   ~ 0
-ALE
+ALE_~WE
 Wire Wire Line
 	3100 3900 3460 3900
 Wire Wire Line
@@ -529,7 +529,7 @@ F 3 "~" H 3500 5300 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Text Label 3100 5300 0    50   ~ 0
-ALE
+ALE_~WE
 Text Label 3100 5400 0    50   ~ 0
 ~WE
 Wire Wire Line

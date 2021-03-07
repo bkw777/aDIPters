@@ -1,0 +1,12 @@
+
+FlashROM_100 uses a 256k 29F010, but only 32k are wired up.
+
+To write the chip, force the programmer to treat it as a 28F256
+
+$ minipro --no_id_error --device='AM28F256' --write=T102_M.BR
+Found TL866II+ 04.2.123 (0x27b)
+WARNING: Chip ID mismatch: expected 0x01A1, got 0x504F (unknown)
+Erasing... 41.04Sec OK
+Writing Code...  1.36Sec  OK
+Reading Code...  0.29Sec  OK
+Verification OK

@@ -27,7 +27,7 @@ Includes /CS signal breakout/remote loop to use with REX main rom feature. This 
 
 To program the eeprom, use the FlexROM_100_programming_adapter, or an SOIC-28 test clip.
 
-To install without REX, just install a shunt on the /CS pins.
+To install without REX, install a jumper on the /CS pins.
 
 To use the REX main rom feature:  
 * Run 2 jumper wires about 10" long with female "dupont" sockets on both ends, from the /CS OUT and /CS IN pins out to the option-rom compartment.  
@@ -37,14 +37,18 @@ To use the REX main rom feature:
 
 To remove a REX and re-enable the internal ROM:  
 * Disconnect the /CS OUT wire from the REX TP1 pin, and remove the REX.  
-* Use a short jumper wire with male "dupont" pins on both ends to join the /CS OUT and /CS IN wires to each other.
+* Use a short male dupont jumper wire to join the /CS OUT and /CS IN wires to each other in the option rom compartment.
 
 ## FlashROM_100
 Same as FlexROM_100 but using a 29F010-compatible flash part instead of the 28C256 EEPROM part.  
 SST39SF010A, GLS29EE010, etc.
 
+To program the chip, use the FlashROM_100_Programming_Adapter, and force the programmer to ignore the chip-id and size, and use 28F256. 
+
 ## FlexROM_102
 http://tandy.wiki/FlexROM_102
+
+Same as FlexROM_100 but for Model 102.
 
 Uses an electrically re-programmable EEPROM (28C256) in place of the original system rom in a Tandy Model 102.
 
@@ -54,13 +58,13 @@ The Model 102 system ROM is soldered, so to use this requires de-soldering the o
 
 Since the pinout is standard 27C256 or 256K x 8 mask rom, you could also use the generic 28C256_to_27C256 board above for the main rom in a 102. But if you want to use the REX main rom feature in a Model 102, then this board provides the /CS remote loop to connect to REX's TP1 pin, and allow reverting from REX back to the internal ROM without opening the Model 102 case again to re-install the original main rom chip.
 
-To program the eeprom, set the mini jumpers to PROGRAM (two shunts on the two pairs of pins), put the board in the programmer, and set the programmer for 28C256. There is no separate programming adapter needed.
+To program the eeprom, set the mini jumpers to PROGRAM (two shunts on the two pairs of pins), put the board in the programmer, and set the programmer for 28C256. There is no separate programming adapter needed like for FlexROM_100 and FlashROM_100.
 
 To install/run, set the mini jumpers to RUN (single shunt on the two center pins), and install in the Model 102 in place of the main rom.
 
 To use the REX main rom feature, run 2 female dupont jumper wires from the /CS OUT and /CD IN pin out to the option-rom compartment. Label the /CS OUT wire. Attach the /CS OUT wire to TP1 on the REX.
 
-To install without REX, just install a shunt on the /CS pins.
+To install without REX, install a jumper on the /CS pins.
 
 ## FlashROM_8300 aka uPD23C1000_FLASH
 http://tandy.wiki/FlashROM_8300
