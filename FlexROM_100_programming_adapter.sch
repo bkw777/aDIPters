@@ -4,12 +4,12 @@ EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
-Title "28C256 pins to LH535618 socket"
-Date "2020-11-23"
-Rev ""
+Title "Programming Adapter for FlexROM_100"
+Date "2021-03-07"
+Rev "002"
 Comp "Brian K. White - b.kenyon.w@gmail.com"
-Comment1 "TRS-80 Model 100 system rom M12"
-Comment2 "With REX main ROM support"
+Comment1 ""
+Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr

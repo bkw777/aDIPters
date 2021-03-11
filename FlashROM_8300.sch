@@ -5,9 +5,9 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "Flash-based uPD23C1000 replacement"
-Date "2020-11-23"
+Date "2021-03-07"
 Rev "002"
-Comp "b.kenyon.w@gmail.com"
+Comp "Brian K. White - b.kenyon.w@gmail.com"
 Comment1 "DIP-32 version"
 Comment2 ""
 Comment3 ""
