@@ -4,11 +4,11 @@ EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
-Title "Flash-based uPD23C1000 replacement"
-Date "2021-03-07"
+Title "29F010 to 23C1000"
+Date "2021-05-09"
 Rev "002"
 Comp "Brian K. White - b.kenyon.w@gmail.com"
-Comment1 "DIP-32 version"
+Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -18,7 +18,7 @@ L 000_LOCAL:uPD23C1000_FLASH J1
 U 1 1 5E5C209E
 P 2190 3500
 F 0 "J1" H 2190 5100 50  0000 C CNN
-F 1 "uPD23C1000 / FLASH" H 2190 4990 50  0000 C CNN
+F 1 "23C1000 / 29F010 switchable pinout" H 2190 4990 50  0000 C CNN
 F 2 "000_LOCAL:DIP32_0.6_pcb_sil_pins" H 2190 3500 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc0014.pdf" H 2190 3500 50  0001 C CNN
 	1    2190 3500

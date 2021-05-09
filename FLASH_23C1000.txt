@@ -1,0 +1,86 @@
+Notes for FLASH_23C1000 & FLASH_23C1000_DIP28
+
+This adapter allows to replace a 23C1000 mask rom with a writable flash, eeprom, or eprom.
+At least the following machines use a 23C1000: NEC PC-8300, PC-8401, PC-8500
+
+23C1000 is a DIP-28 package. There are 2 versions of the adapter, one DIP-28 and one DIP-32.
+
+The DIP-32 version is more practical and convenient to use, but leaves 4 pins hanging beyond the end of the DIP-28 socket, and so is only usable when the original socket has some empty space off the pin1/pin-28 end of the socket.
+
+The DIP-28 version is a little less convenient to use because it's slightly more complicated to connect up for programming, but the board fits strictly within the DIP-28 footprint of the chip it replaces, and so it works in all cases.
+
+NEC PC-8300 and PC-8500 can take the DIP-32 board.
+
+NEC PC-8401 should use the DIP-28 board. There is a component on the motherboard that could touch pins 1 & 2 of the DIP-32 board.
+
+
+---------------------------------------------------------------------------------------
+
+R1, R2, R3 - values can be anything from 10k to 50k
+
+Usually do not install R3.
+
+R3 just allows the board to support older flash, eeprom, and even UV/OTP eprom devices that have a Vpp pin, and where the Vpp pin should be tied to Vcc when not programming. Even some of the older devices with Vpp don't need this.
+
+You can't buy those devices new today anyway. The support is only there because the pinouts are the same except for the single extra Vpp pin, so it costs nothing to allow the board to support a wide range of devices. If you happen to have an old 27C010 or 28C010, you can actually use it.
+
+----------------------------------------------------------------------------------------
+
+Options for the legs:
+
+* TE 1544210
+* Mill-Max 3121
+* gold-filled 26 gauge half-hard brass jewelry wire
+
+----------------------------------------------------------------------------------------
+
+SUPPORTED CHIPS:
+
+Supports a several chips, any jedec pinout, 5v, 128k x 8, parallel device.
+
+Without R3 installed, supports single-voltage devices (no Vpp pin), and some older devices with a Vpp pin that don't need Vpp tied to Vcc or gnd when not programming. At least:  
+39SF010, 29SF010, 29EE010, 29F010, 28C010, NM27C010
+
+With R3 installed, supports all of the above, plus older devices that have a Vpp pin. At least:  
+28F010, 27SF010, 27C010
+
+In all cases above, both the TSOP and PLCC (or CLCC!) package are supported.
+
+----------------------------------------------------------------------------------------
+
+PROGRAMMING:
+
+If the programmer does not recognize the exact chip you have installed on the board, it may support the same type of chip from another manufacturer.
+
+For instance, if you have a GLS29EE010 TSOP soldered on the board:
+The TL-866 minipro utility does not have GLS29EE010 in it's device database, but it does have SST29EE010.
+
+In some cases you may need to tell the programmer that the chip is the PLCC package to get the right pinout even if it's really TSOP.
+
+This example run was with a GLS29EE010 TSOP soldered on the board:
+
+$ minipro -y -p "SST29EE010@PLCC32" -w 831000-438-y2k.bin 
+Found TL866II+ 04.2.110 (0x26e)
+WARNING: Chip ID mismatch: expected 0xBF07, got 0xFFFF (unknown)
+Erasing... 0.20Sec OK
+Protect off...OK
+Writing Code...  6.13Sec  OK
+Reading Code...  1.25Sec  OK
+Verification OK
+Protect on...OK
+$
+
+The data was written and read back successfully, and the programmed board worked in a PC-8300.
+
+
+This example run was with a SST39SF010A PLCC32 installed:
+
+$ minipro -p "SST39SF010A@PLCC32" -w 831000-438-y2k.bin 
+Found TL866II+ 04.2.110 (0x26e)
+Chip ID OK: 0xBFB5
+Erasing... 0.40Sec OK
+Writing Code...  7.02Sec  OK
+Reading Code...  0.99Sec  OK
+Verification OK
+$
+

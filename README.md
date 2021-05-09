@@ -66,10 +66,10 @@ To use the REX main rom feature, run 2 female dupont jumper wires from the /CS O
 
 To install without REX, install a jumper on the /CS pins.
 
-## FlashROM_8300 aka uPD23C1000_FLASH
+## FLASH_23C1000
 http://tandy.wiki/FlashROM_8300
 
-This board uses a flash chip to replace the non-standard pinout 128K main ROM in a NEC PC-8300.
+This board uses a variety of writable flash, eeprom, or eprom devices to replace the non-standard pinout 128K mask rom in at least: NEC PC-8300, PC-8401, and PC-8500
 
 The nominal flash chip is SST39SF010, but there are several other compatible parts. The specs for a compatible chip are:
 * 128K x 8  
@@ -88,14 +88,16 @@ At least the following parts are compatible:
 * 27SF010  
 * 27C010  
 
-The R3 resistor is only needed for EPROM and EEPROM chips that have a VPP pin (27xxx/28xxx). The flash chips don't use it (29xxx).
+The R3 resistor is only needed for EPROM and EEPROM devices that have a Vpp pin (27xxx/28xxx). Flash devices (29xxx) don't use it.
 
-The RUN/PROGRAM jumper alters the pinout, so that the chip may be programmed by placing the board directly in a programmer zif socket.
+The RUN/PRG jumper alters the pinout, so that the chip may be programmed by placing the board directly in a programmer zif socket.
 
 For programming:  
-1. Place the jumper in the PROGRAM position  
+1. Place the jumper in the PRG position  
 1. Place the board in the programmer's zif socket  
 
-For installing in the PC-8300:  
+For installing in place of the 23C1000:  
 1. Place the jumper in the RUN position  
-1. Place the board in the ROM0 socket with the top 4 pins (1, 2, 31, 32) hanging off the pin #1 end of the socket, and the bottom 28 pins filling the socket  
+1. Place the board in the socket with the top 4 pins (1, 2, 31, 32) hanging off the pin #1 end of the socket, and the bottom 28 pins 3-30 filling the socket  
+
+For NEC PC-8401, cut pin 1 a little short so that it doesn't touch R65, or use the DIP-28 version of the board, FLASH_23C1000_DIP28.

@@ -4,9 +4,9 @@ EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
-Title "29F010 to uPD23C1000"
-Date "2020-11-23"
-Rev "002"
+Title "29F010 to 23C1000"
+Date "2021-05-09"
+Rev "003"
 Comp "Brian K. White - b.kenyon.w@gmail.com"
 Comment1 ""
 Comment2 ""
@@ -18,7 +18,7 @@ L 000_LOCAL:uPD23C1000 J1
 U 1 1 5E5C209E
 P 2120 2600
 F 0 "J1" H 2110 3970 50  0000 C CNN
-F 1 "uPD23C1000" H 2110 3860 50  0000 C CNN
+F 1 "23C1000" H 2110 3860 50  0000 C CNN
 F 2 "000_LOCAL:DIP28_0.6_pcb_sil_pins" H 2120 2600 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc0014.pdf" H 2120 2600 50  0001 C CNN
 	1    2120 2600
@@ -876,7 +876,7 @@ Wire Bus Line
 Text Notes 1870 1120 0    50   ~ 0
 DIP-28 legs
 Text Notes 1200 6840 0    50   ~ 0
-J2, J3: RUN vs PROGRAM configuration\n\nRUN configuration - for normal operation:\n* Install a jumper on J2\n* Install jumper on J3 in the A16 position\n\nPROGRAM configuration - for writing to the flash chip:\n* Remove the jumper from J2\n* Move the J3 jumper to the ~OE~ position\n* Insert the board into the programmer's ZIF socket, 2 rows away from the top.\nDon't close the ZIF clamping lever yet.\n* Connect J2 VCC to ZIF pin 32. (*)\n* Connect J2 ~WE~ to ZIF pin 31.\n* Connect J3 A16 to ZIF pin 2.\n* Close the ZIF clamping lever\n\n(*) Common "dupont" male-female jumper wires\nhave a female end that can slide onto to the J2 & J3 pins,\nand a male end that can insert into the ZIF socket.\n
+J2, J3: RUN vs PROGRAM configuration\n\nRUN configuration - for normal operation:\n* Install a jumper on J2\n* Install a jumper on J3 in the A16 position\n\nPROGRAM configuration - for writing to the flash chip:\n* Remove the jumper from J2\n* Move the J3 jumper to the ~OE~ position\n* Insert the board into the programmer ZIF socket, 2 rows away from the top (chip pin 1 in zif pin 3).\n* Connect J2 VCC to ZIF pin 32. (*)\n* Connect J2 ~WE~ to ZIF pin 31.\n* Connect J3 A16 to ZIF pin 2.\n\n(*) male-female dupont wire\n
 Text Label 5280 3950 0    50   ~ 0
 A17
 Entry Wire Line
@@ -913,7 +913,7 @@ NoConn ~ 7300 3850
 NoConn ~ 9310 3850
 NoConn ~ 5280 3850
 Text Notes 5360 5690 0    50   ~ 0
-U1 or U2 or U3: flash memory, 128K x 8, parallel, 5v\nExamples: SST39SF010, GLS29EE010, AM29F010\n\nIf necessary, 256K xxx020 part may be used in place of 128K xxx010 part.\nxxx040 part may not be used.\n
+U1 or U2 or U3: flash memory, 128K x 8, parallel, 5v\nExamples: SST39SF010, GLS29EE010, AM29F010\n\n256K xxx020 part may be used in place of 128K xxx010 part.\n
 $Comp
 L 000_LOCAL:Net-Tie_2 NT1
 U 1 1 5FA78AD5
