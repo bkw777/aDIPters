@@ -12,14 +12,15 @@ Use an electrically re-programmable EEPROM (28C256) in any socket that normally 
 
 Since this board goes into a very standard socket and replaces a very standard pinout chip, there are countless places it may be used, but here are just a few:
 
-:Tandy Model 102 system rom  
-:Tandy Model 200 system rom  
-:Tandy Model 600 system roms  
-:NEC PC-8201 system rom  
-:NEC PC-8201 option rom  
-:NEC PC-8300 option rom
+ Tandy Model 102 system rom  
+ Tandy Model 200 system rom  
+ Tandy Model 600 system roms  
+ NEC PC-8201 system and option roms  
+ NEC PC-8300 option rom  
+ Olivetti M10 system and option roms  
+ Kyotronic KC-85 system and option roms  
 
-The chip may be programmed by placing the board directly in a programmers' zif socket.
+The chip may be programmed by setting the jumpers for programming and placing the board directly in a programmers' zif socket.
 
 ## FlexROM_100
 ![](FlexROM_100.jpg)  
@@ -29,27 +30,27 @@ http://tandy.wiki/FlexROM_100
 
 Uses an electrically re-programmable EEPROM (28C256) in place of the non-standard pinout mask ROM (LH535618) in a TRS-80 Model 100 system rom socket.
 
-Includes /CS signal breakout/remote loop to use with REX main rom feature. This allows reverting from REX back to the internal main rom without opening the computer again to re-install the original main rom chip.
+Includes /CS signal send-return breakout to use with [REX main rom feature](http://bitchin100.com/wiki/index.php?title=Main_ROM_Management_Feature). This allows not only using the REX main-rom feature but also allows reverting from REX back to the internal main rom without opening the computer again to re-install the original main rom chip. It is especially convenient with [this re-spin version of REX Classic](http://tandy.wiki/Building_a_REX), which has horizontal male pins on TP1 and TP2, which allows using removable female dupont jumper wires between the FlexROM_100 inside the computer and the REX in the option rom compartment.
 
-To program the eeprom, use the FlexROM_100_programming_adapter, or an SOIC-28 test clip.
+To program the eeprom, use either the FlexROM_100_programming_adapter, or an SOIC-28 test clip.
 
 To install without REX, install a jumper on the /CS pins.
 
 To use the REX main rom feature:  
-* Run 2 jumper wires about 10" long with female "dupont" sockets on both ends, from the /CS OUT and /CS IN pins out to the option-rom compartment.  
-* Label the /CS OUT wire so that you can tell which one it is from the option rom compartment after the machine is re-assembled. One idea is just use the wire colors to identify the /CS_OUT-TP1 wire. When installing the wires, pick a neutral black, white, or grey wire for the /CS IN wire, and pick any other color for the /CS OUT wire. Then later you only have to remember that the colored wire goes on the TP1 pin.  
+* Run 2 10-inch female dupont jumper wires from the /CS pins out to the option-rom compartment.  
+* Label the /CS OUT wire so that you can tell which one it is from the option rom compartment after the machine is re-assembled. One suggestion is to use the wire colors to identify the /CS_OUT-TP1 wire. When installing the wires, pick a neutral black, white, or grey wire for the /CS IN wire, and pick any other color for the /CS OUT wire. Then later you only have to remember that "the colored wire is the special one", the colored wire goes on the TP1 pin.  
 * Attach the /CS OUT wire to the TP1 pin on the REX.  
-* Leave the /CS IN wire un-connected loose in the option rom compartment.
+* Leave the /CS IN wire un-connected loose in the option rom compartment. It is only used when you want to remove the REX, or just don't want to use the REX's main-rom feature.
 
-To remove a REX and re-enable the internal ROM:  
-* Disconnect the /CS OUT wire from the REX TP1 pin, and remove the REX.  
+To re-enable the internal ROM (To remove the REX, or just to stop using the main-rom feature):  
+* Disconnect the /CS OUT wire from the REX TP1 pin.  
 * Use a short male dupont jumper wire to join the /CS OUT and /CS IN wires to each other in the option rom compartment.
 
 ## FlexROM_100 Programming Adapter
 ![](FlexROM_100_programming_adapter.jpg)  
 ![](FlexROM_100_programming_adapter.svg)  
 
-Allows re-writing the FlexROM_100 without a soic test clip or desoldering the chip.
+Allows writing to the FlexROM_100 without a soic-28 test clip.  
 
 ## FlashROM_100
 Same as FlexROM_100 but using a 29F010 or compatible flash part instead of a 28C256 EEPROM part.  
@@ -79,7 +80,9 @@ Allows re-writing the FlashROM_100.
 
 http://tandy.wiki/FlexROM_102
 
-Same as FlexROM_100 but for Model 102.
+Same as FlexROM_100, but for Model 102.  
+or/also,  
+Same as 28C256_to_27C256, with /CS breakout for REX Classic main rom feature.
 
 Uses an electrically re-programmable EEPROM (28C256) in place of the original system rom in a Tandy Model 102.
 
@@ -98,10 +101,10 @@ To use the REX main rom feature, run 2 female dupont jumper wires from the /CS O
 To install without REX, install a jumper on the /CS pins.
 
 ## FLASH_23C1000
-![](FLASH_23C100.jpg)  
-![](FLASH_23C100.svg)  
+![](FLASH_23C1000.jpg)  
+![](FLASH_23C1000.svg)  
 
-http://tandy.wiki/FlashROM_8300
+http://tandy.wiki/FLASH_23C1000
 
 This board uses a variety of writable flash, eeprom, or eprom devices to replace the non-standard pinout 128K mask rom in at least: NEC PC-8300, PC-8401, and PC-8500
 
@@ -164,8 +167,13 @@ To install this version:
 
 If you have a Molex 78805 socket and are willing to consume it for this, this provides an adapter to allow reading Model 100/200 Option ROMs in an eprom programmer.
 
-The jumpers provide 5 different ways to handle pin #23 in the socket. In the Model 100, pin 23 is labelled as a 2nd /CS (aka /CE), but is connected to the ALE bus signal. The few option roms that natively have the non-standard Model 100 pinout (MS MultiPLAN, Ineractive Solutions) require pin 23 be connected to /CE. Most (all?) other option roms are constructed from a 27C256 in some form of pinout adapter. A 27C256 does not have an ALE pin nor a 2nd /CS pin, and does not need pin 23 connected to anything. The jumpers allow pin 23 in the Molex socket to be connected to nothing, GND, VCC, VPP, or /CE.
-: For the molded plastic roms with LH53562x part numbers (MS MultiPLAN, Ineractive Solutions), use the /CE position.
-: For most 3rd party roms constructed of a ceramic 27C256 with pinout adapter, use either /CE, or remove the jumper entirely.
-: The other options are for possible future use with other new custom option rom modules like [Teeprom](httpsgithub.com/bkw777/Teeprom) or FlashOPT_100 etc, that might be specifically designed to use that otherwise un-used pin for /Vpp or /WE etc. Currently none are in fact so wired.
+The jumpers provide 5 different ways to handle pin #23 in the socket.  
+In the Model 100, pin 23 is labelled as a 2nd /CS (aka /CE), but is connected to the ALE bus signal.  
+The few option roms that natively have the non-standard Model 100 pinout (MS MultiPLAN, Ineractive Solutions) require pin 23 be connected to /CE.  
+Most (all?) other option roms are constructed from a 27C256 in some form of pinout adapter.  
+A 27C256 does not have an ALE pin nor a 2nd /CS pin, and does not need pin 23 connected to anything.  
+The jumpers allow pin 23 in the Molex socket to be connected to nothing, GND, VCC, VPP, or /CE.  
+* For the molded plastic roms with LH53562x part numbers (MS MultiPLAN, Ineractive Solutions), use the /CE position.  
+* For most 3rd party roms constructed of a ceramic 27C256 with pinout adapter, use either /CE, or remove the jumper entirely.  
+* The other options are for possible future use with other new custom option rom modules like [Teeprom](httpsgithub.com/bkw777/Teeprom) or FlashOPT_100 etc, that might be specifically designed to use that otherwise un-used pin for /Vpp or /WE etc. Currently none are in fact so wired.
 
