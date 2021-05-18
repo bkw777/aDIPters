@@ -5,7 +5,7 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "28C256 SOIC to 27C256 DIP"
-Date "2020-11-23"
+Date "2021-05-18"
 Rev "002"
 Comp "Brian. K. White - b.kenyon.w@gmail.com"
 Comment1 ""
