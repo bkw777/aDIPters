@@ -3,6 +3,9 @@ This is a collection of different adapter PCBs to plug SMT parts into DIP socket
 Generally to use a newer PLCC, SOIC, or TSOP EEPROM or Flash part to replace a DIP mask ROM or UV EPROM in a vintage computer.
 
 ## 28C256_to_27C256
+![](28C256_to_27C256.jpg)  
+![](28C256_to_27C256.svg)
+
 http://tandy.wiki/28C256_to_27C256
 
 Use an electrically re-programmable EEPROM (28C256) in any socket that normally takes a 256K x 8 UV EPROM (27C256) or standard pinout mask ROM.
@@ -19,6 +22,9 @@ Since this board goes into a very standard socket and replaces a very standard p
 The chip may be programmed by placing the board directly in a programmers' zif socket.
 
 ## FlexROM_100
+![](FlexROM_100.jpg)  
+![](FlexROM_100.svg)  
+
 http://tandy.wiki/FlexROM_100
 
 Uses an electrically re-programmable EEPROM (28C256) in place of the non-standard pinout mask ROM (LH535618) in a TRS-80 Model 100 system rom socket.
@@ -39,13 +45,38 @@ To remove a REX and re-enable the internal ROM:
 * Disconnect the /CS OUT wire from the REX TP1 pin, and remove the REX.  
 * Use a short male dupont jumper wire to join the /CS OUT and /CS IN wires to each other in the option rom compartment.
 
+## FlexROM_100 Programming Adapter
+![](FlexROM_100_programming_adapter.jpg)  
+![](FlexROM_100_programming_adapter.svg)  
+
+Allows re-writing the FlexROM_100 without a soic test clip or desoldering the chip.
+
 ## FlashROM_100
-Same as FlexROM_100 but using a 29F010-compatible flash part instead of the 28C256 EEPROM part.  
+Same as FlexROM_100 but using a 29F010 or compatible flash part instead of a 28C256 EEPROM part.  
 SST39SF010A, GLS29EE010, etc.
 
-To program the chip, use the FlashROM_100_Programming_Adapter, and force the programmer to ignore the chip-id and size, and use 28F256. 
+To program the chip, use the FlashROM_100_Programming_Adapter, and tell the programmer to ignore the CHIP_ID and use device 28F256.
+
+There are 2 versions, PLCC and TSOP
+
+### PLCC
+![](FlashROM_100_PLCC.jpg)  
+![](FlashROM_100_PLCC.svg)  
+
+### TSOP
+![](FlashROM_100_TSOP.jpg)  
+![](FlashROM_100_TSOP.svg)  
+
+## FlashROM_100 Programming Adapter
+![](FlashROM_100_programming_adapter.jpg)  
+![](FlashROM_100_programming_adapter.svg)  
+
+Allows re-writing the FlashROM_100.
 
 ## FlexROM_102
+![](FlexROM_102.jpg)  
+![](FlexROM_102.svg)  
+
 http://tandy.wiki/FlexROM_102
 
 Same as FlexROM_100 but for Model 102.
@@ -67,6 +98,9 @@ To use the REX main rom feature, run 2 female dupont jumper wires from the /CS O
 To install without REX, install a jumper on the /CS pins.
 
 ## FLASH_23C1000
+![](FLASH_23C100.jpg)  
+![](FLASH_23C100.svg)  
+
 http://tandy.wiki/FlashROM_8300
 
 This board uses a variety of writable flash, eeprom, or eprom devices to replace the non-standard pinout 128K mask rom in at least: NEC PC-8300, PC-8401, and PC-8500
@@ -101,3 +135,37 @@ For installing in place of the 23C1000:
 1. Place the board in the socket with the top 4 pins (1, 2, 31, 32) hanging off the pin #1 end of the socket, and the bottom 28 pins 3-30 filling the socket  
 
 For NEC PC-8401, cut pin 1 a little short so that it doesn't touch R65, or use the DIP-28 version of the board, FLASH_23C1000_DIP28.
+
+## FLASH_23C1000_DIP28
+![](FLASH_23C1000_DIP28.jpg)  
+![](FLASH_23C1000_DIP28.svg)  
+
+Same as FLASH_23C1000, except without exceeding the DIP-28 footprint.
+
+Programming this version is slightly more complicated. To program this version:
+* Place the board in the programmer 2 rows from the top, such that pin 1 on the board is in pin 3 of a virtual DIP-32 in the programmer.
+* Remove the VCC-/WE jumper.
+* Move the /OE-A16 jumper to /OE
+* Connect the A16 pin to programmer DIP-32 pin 2
+* Connect the VCC pin to programmer DIP-32 pin 32
+* Connect the /WE pin to programmer DIP-32 pin 31
+
+Configure the programmer for whatever device is installed on the board, IE SST39SF010A etc.
+
+To install this version:
+* Install a jumper across the VCC-/WE pins
+* Move the /OE-A16 jumper to A16
+* Install the board in the  DIP-28 socket in place of any uPD23C1000, D23C1000A, MX23C1000 etc.
+
+## TANDY 100/102/200 Option ROM to 27C256 pinout programming adapter
+![](TRS-80_100_200_Option_ROM_programming_adapter.jpg)  
+<!-- ![](TRS-80_100_200_Option_ROM_programming_adapter.bottom.jpg)  -->
+![](TRS-80_100_200_Option_ROM_programming_adapter.svg)
+
+If you have a Molex 78805 socket and are willing to consume it for this, this provides an adapter to allow reading Model 100/200 Option ROMs in an eprom programmer.
+
+The jumpers provide 5 different ways to handle pin #23 in the socket. In the Model 100, pin 23 is labelled as a 2nd /CS (aka /CE), but is connected to the ALE bus signal. The few option roms that natively have the non-standard Model 100 pinout (MS MultiPLAN, Ineractive Solutions) require pin 23 be connected to /CE. Most (all?) other option roms are constructed from a 27C256 in some form of pinout adapter. A 27C256 does not have an ALE pin nor a 2nd /CS pin, and does not need pin 23 connected to anything. The jumpers allow pin 23 in the Molex socket to be connected to nothing, GND, VCC, VPP, or /CE.
+: For the molded plastic roms with LH53562x part numbers (MS MultiPLAN, Ineractive Solutions), use the /CE position.
+: For most 3rd party roms constructed of a ceramic 27C256 with pinout adapter, use either /CE, or remove the jumper entirely.
+: The other options are for possible future use with other new custom option rom modules like [Teeprom](httpsgithub.com/bkw777/Teeprom) or FlashOPT_100 etc, that might be specifically designed to use that otherwise un-used pin for /Vpp or /WE etc. Currently none are in fact so wired.
+

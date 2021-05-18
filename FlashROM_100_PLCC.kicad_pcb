@@ -11,7 +11,7 @@
 
   (page USLetter)
   (title_block
-    (title FlashROM_100)
+    (title "FlashROM_100 - PLCC")
     (date 2021-05-12)
     (rev 003)
     (company "Brian K. White - b.kenyon.w@gmail.com")
@@ -42,7 +42,7 @@
   )
 
   (setup
-    (last_trace_width 0.2)
+    (last_trace_width 0.18)
     (user_trace_width 0.16)
     (user_trace_width 0.2)
     (user_trace_width 0.3)

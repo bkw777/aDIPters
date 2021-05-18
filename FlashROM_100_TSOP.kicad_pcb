@@ -1,4 +1,4 @@
-(kicad_pcb (version 20171130) (host pcbnew 5.1.9-73d0e3b20d~88~ubuntu20.10.1)
+(kicad_pcb (version 20171130) (host pcbnew 5.1.10-88a1d61d58~88~ubuntu20.10.1)
 
   (general
     (thickness 1.6)
@@ -12,8 +12,8 @@
   (page USLetter)
   (title_block
     (title FlashROM_100)
-    (date 2021-03-07)
-    (rev 002)
+    (date 2021-05-12)
+    (rev 003)
     (company "Brian K. White - b.kenyon.w@gmail.com")
     (comment 1 "System ROM for TRS-80 Model 100 with support for REX main rom feature")
   )
@@ -74,7 +74,7 @@
     (grid_origin 150 100)
     (visible_elements FFFFFF7F)
     (pcbplotparams
-      (layerselection 0x010fc_ffffffff)
+      (layerselection 0x010f0_ffffffff)
       (usegerberextensions false)
       (usegerberattributes false)
       (usegerberadvancedattributes false)
@@ -530,10 +530,10 @@
     (tags "CMS TSOP")
     (path /5E5B130A)
     (attr smd)
-    (fp_text reference U1 (at 0 0 unlocked) (layer F.SilkS)
+    (fp_text reference U1 (at 0 0 unlocked) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 29F010 (at 1.27 0 90) (layer F.Fab)
+    (fp_text value 29F010 (at 0 0 270 unlocked) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 4 -6.125) (end 4 -5.875) (layer F.SilkS) (width 0.12))
@@ -618,8 +618,8 @@
     (tags "resistor 0805")
     (path /5E6B3AF8)
     (attr smd)
-    (fp_text reference R1 (at -0.04 -0.01 -270 unlocked) (layer F.SilkS)
-      (effects (font (size 0.6 0.6) (thickness 0.08)))
+    (fp_text reference R1 (at -0.04 -0.01 -90 unlocked) (layer F.SilkS)
+      (effects (font (size 0.8 0.8) (thickness 0.1)))
     )
     (fp_text value 47K (at 0 1.75) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -654,8 +654,8 @@
     (tags "resistor 0805")
     (path /5E68C7F8)
     (attr smd)
-    (fp_text reference R2 (at -0.04 -0.02 90 unlocked) (layer F.SilkS)
-      (effects (font (size 0.6 0.6) (thickness 0.08)))
+    (fp_text reference R2 (at -0.04 -0.02 -90 unlocked) (layer F.SilkS)
+      (effects (font (size 0.8 0.8) (thickness 0.1)))
     )
     (fp_text value 47K (at 0 1.75) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
