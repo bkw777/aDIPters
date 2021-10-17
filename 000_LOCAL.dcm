@@ -36,6 +36,18 @@ K connector
 F ~
 $ENDCMP
 #
+$CMP DS1000
+D 5-Tap Delay Line
+K delay timing
+F https://rocelec.widen.net/view/pdf/cehhj9rbxx/MAXMS15694-1.pd
+$ENDCMP
+#
+$CMP DS1100
+D 5-Tap Delay Line
+K delay timing
+F https://datasheets.maximintegrated.com/en/ds/DS1100.pdf
+$ENDCMP
+#
 $CMP Jumper_2_Bridged
 D Jumper, 2-pole, closed/bridged
 K Jumper SPST
