@@ -177,3 +177,7 @@ The jumpers allow pin 23 in the Molex socket to be connected to nothing, GND, VC
 * For most 3rd party roms constructed of a ceramic 27C256 with pinout adapter, use either /CE, or remove the jumper entirely.  
 * The other options are for possible future use with other new custom option rom modules like [Teeprom](httpsgithub.com/bkw777/Teeprom) or FlashOPT_100 etc, that might be specifically designed to use that otherwise un-used pin for /Vpp or /WE etc. Currently none are in fact so wired.
 
+## DS1000
+![](DS1000_DIP14.jpg)
+![](DS1000_DIP14.svg)
+
