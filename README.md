@@ -106,7 +106,8 @@ To install without REX, install a jumper on the /CS pins.
 
 http://tandy.wiki/FLASH_23C1000
 
-This board uses a variety of writable flash, eeprom, or eprom devices to replace the non-standard pinout 128K mask rom in at least: NEC PC-8300, PC-8401, and PC-8500
+This board uses a variety of writable flash, eeprom, or eprom devices to replace the non-standard pinout 128K mask rom in at least: NEC PC-8300, PC-8401, and PC-8500  
+Not tested but should also work in Cambridge Z88
 
 The nominal flash chip is SST39SF010, but there are several other compatible parts. The specs for a compatible chip are:
 * 128K x 8  
@@ -143,7 +144,9 @@ For NEC PC-8401, cut pin 1 a little short so that it doesn't touch R65, or use t
 ![](FLASH_23C1000_DIP28.jpg)  
 ![](FLASH_23C1000_DIP28.svg)  
 
-Same as FLASH_23C1000, except without exceeding the DIP-28 footprint.
+Same as FLASH_23C1000, except without exceeding the DIP-28 footprint.  
+Tested in NEC PC-8300, PC-8401, PC-8500  
+Not yet tested but should also work in Cambridge Z88
 
 Programming this version is slightly more complicated. To program this version:
 * Place the board in the programmer 2 rows from the top, such that pin 1 on the board is in pin 3 of a virtual DIP-32 in the programmer.
