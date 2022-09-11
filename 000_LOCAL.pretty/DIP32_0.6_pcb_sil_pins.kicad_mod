@@ -1,4 +1,4 @@
-(module DIP32_0.6_pcb_sil_pins (layer F.Cu) (tedit 616BB267)
+(module DIP32_0.6_pcb_sil_pins (layer F.Cu) (tedit 616CEE41)
   (descr "28-lead though-hole mounted DIP package, row spacing 15.24 mm (600 mils)")
   (tags "THT DIP DIL PDIP 2.54mm 15.24mm 600mil")
   (fp_text reference REF** (at 0 -21.38) (layer F.SilkS)
@@ -46,8 +46,8 @@
   (pad 15 thru_hole circle (at -7.62 16.51) (size 1.2 1.2) (drill 0.6) (layers *.Cu *.Mask))
   (pad 31 thru_hole circle (at 7.62 -16.51) (size 1.2 1.2) (drill 0.6) (layers *.Cu *.Mask))
   (pad 32 thru_hole circle (at 7.62 -19.05) (size 1.2 1.2) (drill 0.6) (layers *.Cu *.Mask))
-  (model ${KIPRJMOD}/000_LOCAL.pretty/packages3d/DIP32_legs.step
-    (offset (xyz -7.62 19.05 -1.6002))
+  (model ${KIPRJMOD}/000_LOCAL.pretty/packages3d/DIP32_legs_solder.step
+    (offset (xyz -7.62 19.05 -1.7399))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 90))
   )
