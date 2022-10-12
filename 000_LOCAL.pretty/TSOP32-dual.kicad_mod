@@ -74,12 +74,12 @@
   (pad "31" smd roundrect (at 3.8 -3.25 270) (size 0.3 1) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25) (tstamp 555a4b8a-a3e3-43a8-ad6a-772cd9668c57))
   (pad "32" smd roundrect (at 3.8 -3.75 270) (size 0.3 1) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25) (tstamp 2da87c77-b43e-436e-a7bd-0208d0244149))
   (pad "32" smd roundrect (at 9.8 -3.75 270) (size 0.3 1) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25) (tstamp bb63c4a9-05bb-4e53-99b2-836982678e73))
-  (model "${KIPRJMOD}/000_LOCAL.pretty/3d/TSOP32_8x14.step" hide
+  (model "${KIPRJMOD}/000_LOCAL.pretty/packages3d/TSOP32_8x14.step" hide
     (offset (xyz -3 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
   )
-  (model "${KIPRJMOD}/000_LOCAL.pretty/3d/TSOP32_8X20.step"
+  (model "${KIPRJMOD}/000_LOCAL.pretty/packages3d/TSOP32_8X20.step"
     (offset (xyz 0 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
