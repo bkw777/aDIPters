@@ -45,11 +45,24 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.508
+          "min_clearance": 0.19999999999999998
         }
       },
-      "diff_pair_dimensions": [],
-      "drc_exclusions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
+      "drc_exclusions": [
+        "courtyards_overlap|134382465|91235001|00000000-0000-0000-0000-00005e606307|00000000-0000-0000-0000-00005e6197d1",
+        "courtyards_overlap|143095001|92200001|00000000-0000-0000-0000-00005e6197d1|00000000-0000-0000-0000-00005e63cd90",
+        "courtyards_overlap|155575001|92350001|00000000-0000-0000-0000-00005e6197d1|00000000-0000-0000-0000-00005e638d11",
+        "courtyards_overlap|155575001|92790001|00000000-0000-0000-0000-00005e638d11|00000000-0000-0000-0000-00005e63cd90",
+        "courtyards_overlap|159050001|91235001|00000000-0000-0000-0000-00005e6197d1|00000000-0000-0000-0000-00005fa45d6c",
+        "courtyards_overlap|159050001|91275001|00000000-0000-0000-0000-00005e6197d1|00000000-0000-0000-0000-00005fa45d6c"
+      ],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
@@ -80,8 +93,8 @@
         "padstack": "error",
         "pth_inside_courtyard": "ignore",
         "shorting_items": "error",
-        "silk_over_copper": "warning",
-        "silk_overlap": "warning",
+        "silk_over_copper": "ignore",
+        "silk_overlap": "ignore",
         "skew_out_of_range": "error",
         "through_hole_pad_without_hole": "error",
         "too_many_vias": "error",
@@ -98,7 +111,7 @@
         "allow_blind_buried_vias": false,
         "allow_microvias": false,
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.19999999999999998,
         "min_copper_edge_clearance": 0.024999999999999998,
         "min_hole_clearance": 0.25,
         "min_hole_to_hole": 0.25,
@@ -106,17 +119,32 @@
         "min_microvia_drill": 0.3,
         "min_silk_clearance": 0.0,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.15239999999999998,
-        "min_via_annular_width": 0.049999999999999996,
+        "min_track_width": 0.19999999999999998,
+        "min_via_annular_width": 0.08,
         "min_via_diameter": 0.5,
         "use_height_for_length_calcs": true
       },
       "track_widths": [
         0.0,
-        0.16,
-        0.3
+        0.2,
+        0.3,
+        0.4,
+        0.6
       ],
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        },
+        {
+          "diameter": 0.5,
+          "drill": 0.3
+        },
+        {
+          "diameter": 0.6,
+          "drill": 0.4
+        }
+      ],
       "zones_allow_external_fillets": false,
       "zones_use_no_outline": true
     },

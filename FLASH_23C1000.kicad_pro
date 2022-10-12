@@ -45,11 +45,23 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.16
+          "min_clearance": 0.19999999999999998
         }
       },
-      "diff_pair_dimensions": [],
-      "drc_exclusions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
+      "drc_exclusions": [
+        "courtyards_overlap|119240001|105450001|00000000-0000-0000-0000-00005e6197d1|00000000-0000-0000-0000-00005e6815f7",
+        "courtyards_overlap|119240001|113070001|00000000-0000-0000-0000-00005e6197d1|00000000-0000-0000-0000-00005e6c8b5e",
+        "courtyards_overlap|131670001|103610001|00000000-0000-0000-0000-00005e6197d1|00000000-0000-0000-0000-00005e63cd90",
+        "courtyards_overlap|144640001|103510001|00000000-0000-0000-0000-00005e6197d1|00000000-0000-0000-0000-00005e638d11",
+        "courtyards_overlap|148230001|102899001|00000000-0000-0000-0000-00005e6197d1|00000000-0000-0000-0000-00005fa38820"
+      ],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
@@ -80,8 +92,8 @@
         "padstack": "error",
         "pth_inside_courtyard": "ignore",
         "shorting_items": "error",
-        "silk_over_copper": "warning",
-        "silk_overlap": "warning",
+        "silk_over_copper": "ignore",
+        "silk_overlap": "ignore",
         "skew_out_of_range": "error",
         "through_hole_pad_without_hole": "error",
         "too_many_vias": "error",
@@ -109,16 +121,31 @@
         "min_silk_clearance": 0.0,
         "min_through_hole_diameter": 0.3,
         "min_track_width": 0.19999999999999998,
-        "min_via_annular_width": 0.049999999999999996,
+        "min_via_annular_width": 0.08,
         "min_via_diameter": 0.5,
         "use_height_for_length_calcs": true
       },
       "track_widths": [
         0.0,
+        0.2,
         0.3,
-        0.4
+        0.4,
+        0.6
       ],
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        },
+        {
+          "diameter": 0.5,
+          "drill": 0.3
+        },
+        {
+          "diameter": 0.6,
+          "drill": 0.4
+        }
+      ],
       "zones_allow_external_fillets": false,
       "zones_use_no_outline": true
     },
