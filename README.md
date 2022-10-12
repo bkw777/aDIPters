@@ -49,7 +49,7 @@ SST39SF010A, GLS29EE010, etc.
 
 To program the chip, use the FlashROM_100_Programming_Adapter below, and tell the programmer to ignore the CHIP_ID and use device 28F256.  
 This is because the actual chip is a 128K 29F010, but we are only using 32K and not all of the 29F010 pins are possible to connect to the programmer.  
-So we have to tell the programmer to program a different but compatible 32K part.
+So we have to tell the programmer to program a different but compatible 32K part.  
 (The board uses a 128K chip instead of a 32K chip because they are far more available.)
 
 There are 2 versions, PLCC and TSOP
