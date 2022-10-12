@@ -4,6 +4,7 @@ Generally to use a newer PLCC, SOIC, or TSOP EEPROM or Flash part to replace a D
 
 ## 28C256_to_27C256
 ![](28C256_to_27C256.jpg)  
+![](28C256_to_27C256.bottom.jpg)  
 ![](28C256_to_27C256.svg)
 
 http://tandy.wiki/28C256_to_27C256
