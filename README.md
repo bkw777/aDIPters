@@ -4,7 +4,6 @@ Generally to use a newer PLCC, SOIC, or TSOP EEPROM or Flash part to replace a D
 
 ## 28C256_to_27C256
 ![](28C256_to_27C256.jpg)  
-![](28C256_to_27C256.bottom.jpg)  
 ![](28C256_to_27C256.svg)
 
 http://tandy.wiki/28C256_to_27C256
@@ -165,7 +164,6 @@ To install:
 
 ## TANDY 100/102/200 Option ROM to 27C256 pinout programming adapter
 ![](TRS-80_100_200_Option_ROM_programming_adapter.jpg)  
-<!-- ![](TRS-80_100_200_Option_ROM_programming_adapter.bottom.jpg)  -->
 ![](TRS-80_100_200_Option_ROM_programming_adapter.svg)
 
 If you have a Molex 78805 socket and are willing to consume it for this, this provides an adapter to allow reading Model 100/200 Option ROMs in an eprom programmer without having to bend any pins or desolder any chips.

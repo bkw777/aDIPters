@@ -521,11 +521,11 @@
     (uuid 72e97d59-3f5e-486e-90c2-f7b7d07a3e2c)
   )
 
-  (text "RUN: open\nPROGRAM: closed" (at 139.7 151.13 0)
+  (text "RUN: open\nPROGRAM: close" (at 139.7 151.13 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 03a88272-ff6a-486d-9a81-42aef82fd8aa)
   )
-  (text "Main ROM\nInternal: closed\nREX: open, ~{CS_OUT} to REX TP1\n"
+  (text "Main ROM\nInternal: close\nREX: open, connect ~{CS_OUT} to REX TP1\n"
     (at 139.7 132.08 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 05d4ad76-46d0-426a-86a6-a0002960ae45)
@@ -847,7 +847,7 @@
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00005e68b8a2)
     (property "Reference" "JP1" (id 0) (at 115.57 128.143 0))
-    (property "Value" "~CS~ breakout" (id 1) (at 115.57 126.111 0))
+    (property "Value" "~{CS} breakout" (id 1) (at 115.57 126.111 0))
     (property "Footprint" "000_LOCAL:Pin_Header_Angled_1x02_Pitch2.54mm" (id 2) (at 115.57 130.175 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -877,7 +877,7 @@
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00005fbfb30e)
     (property "Reference" "JP2" (id 0) (at 115.57 147.828 0))
-    (property "Value" "PROGRAM" (id 1) (at 115.57 145.796 0))
+    (property "Value" "PROGRAM/RUN" (id 1) (at 115.57 145.796 0))
     (property "Footprint" "000_LOCAL:Pin_Header_Angled_1x02_Pitch2.54mm" (id 2) (at 115.57 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -1026,10 +1026,10 @@
       (reference "J1") (unit 1) (value "LH535618 DIP LEGS") (footprint "000_LOCAL:DIP28_0.6_pcb")
     )
     (path "/00000000-0000-0000-0000-00005e68b8a2"
-      (reference "JP1") (unit 1) (value "~CS~ breakout") (footprint "000_LOCAL:Pin_Header_Angled_1x02_Pitch2.54mm")
+      (reference "JP1") (unit 1) (value "~{CS} breakout") (footprint "000_LOCAL:Pin_Header_Angled_1x02_Pitch2.54mm")
     )
     (path "/00000000-0000-0000-0000-00005fbfb30e"
-      (reference "JP2") (unit 1) (value "PROGRAM") (footprint "000_LOCAL:Pin_Header_Angled_1x02_Pitch2.54mm")
+      (reference "JP2") (unit 1) (value "PROGRAM/RUN") (footprint "000_LOCAL:Pin_Header_Angled_1x02_Pitch2.54mm")
     )
     (path "/00000000-0000-0000-0000-00005fbfb319"
       (reference "R1") (unit 1) (value "47K") (footprint "000_LOCAL:R_0805")

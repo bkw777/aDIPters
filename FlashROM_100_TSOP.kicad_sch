@@ -6,8 +6,8 @@
 
   (title_block
     (title "FlashROM_100 - TSOP")
-    (date "2022-10-11")
-    (rev "003")
+    (date "2022-10-12")
+    (rev "004")
     (company "Brian K. White - b.kenyon.w@gmail.com")
     (comment 1 "TRS-80 Model 100 system rom with suport for REX main rom feature")
   )
@@ -861,7 +861,7 @@
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00005e68b8a2)
     (property "Reference" "JP1" (id 0) (at 120.015 124.968 0))
-    (property "Value" "~CS~ breakout" (id 1) (at 120.015 122.936 0))
+    (property "Value" "~{CS} breakout" (id 1) (at 120.015 122.936 0))
     (property "Footprint" "000_LOCAL:Pin_Header_Angled_1x02_Pitch2.54mm" (id 2) (at 120.015 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -1086,7 +1086,7 @@
       (reference "J1") (unit 1) (value "LH535618 DIP LEGS") (footprint "000_LOCAL:DIP28_0.6_pcb")
     )
     (path "/00000000-0000-0000-0000-00005e68b8a2"
-      (reference "JP1") (unit 1) (value "~CS~ breakout") (footprint "000_LOCAL:Pin_Header_Angled_1x02_Pitch2.54mm")
+      (reference "JP1") (unit 1) (value "~{CS} breakout") (footprint "000_LOCAL:Pin_Header_Angled_1x02_Pitch2.54mm")
     )
     (path "/00000000-0000-0000-0000-00005fbc3795"
       (reference "JP2") (unit 1) (value "Write-Enable") (footprint "000_LOCAL:Pin_Header_Angled_1x02_Pitch2.54mm")
