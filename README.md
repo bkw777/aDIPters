@@ -90,6 +90,13 @@ To install/run, install a jumper on the /CS pins, set the mini jumpers to RUN (s
 There is a jumper on the /CS pins in both cases. The only time there is not a jumper on the /CS pins is to use the REX Classic main-rom feature.  
 See the FlexROM_100 directions for that.
 
+## FlexROM_200_M13
+![](FlexROM_200_M13.jpg)  
+![](FlexROM_200_M13.svg)  
+
+[FlexROM_200_M13 BOM](FlexROM_200_M13.BOM.csv) or ([DigiKey cart](https://www.digikey.com/short/q3zm9cf4))  
+http://tandy.wiki/FlexROM_200
+
 ## FLASH_23C1000
 ![](FLASH_23C1000.jpg)  
 ![](FLASH_23C1000.svg)  

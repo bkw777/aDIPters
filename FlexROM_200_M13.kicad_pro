@@ -55,7 +55,16 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "courtyards_overlap|115745001|96400001|9745923e-b3f3-4f78-9da8-cbeee6cd8cf3|b6e5ecfa-8725-4acb-8195-6a2ba62d6a18",
+        "courtyards_overlap|115775001|100050001|00000000-0000-0000-0000-00005f9fca43|b6e5ecfa-8725-4acb-8195-6a2ba62d6a18",
+        "courtyards_overlap|115785001|103700001|00000000-0000-0000-0000-00005f9fca13|b6e5ecfa-8725-4acb-8195-6a2ba62d6a18",
+        "courtyards_overlap|115835001|102555001|00000000-0000-0000-0000-00005f9fca13|b6e5ecfa-8725-4acb-8195-6a2ba62d6a18",
+        "courtyards_overlap|115835001|97555001|b6e5ecfa-8725-4acb-8195-6a2ba62d6a18|00000000-0000-0000-0000-00005f9fca43",
+        "courtyards_overlap|117700001|96400001|9745923e-b3f3-4f78-9da8-cbeee6cd8cf3|00000000-0000-0000-0000-00005fa06128",
+        "courtyards_overlap|135603001|99480001|ee0554db-3fb7-4a09-837e-26d8216fc26a|00000000-0000-0000-0000-00005fa06128",
+        "courtyards_overlap|135603001|99525001|00000000-0000-0000-0000-00005fa06128|ee0554db-3fb7-4a09-837e-26d8216fc26a"
+      ],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
@@ -87,7 +96,7 @@
         "pth_inside_courtyard": "ignore",
         "shorting_items": "error",
         "silk_over_copper": "warning",
-        "silk_overlap": "warning",
+        "silk_overlap": "ignore",
         "skew_out_of_range": "error",
         "through_hole_pad_without_hole": "error",
         "too_many_vias": "error",
@@ -360,7 +369,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "FlexROM_102.kicad_pro",
+    "filename": "FlexROM_200_M13.kicad_pro",
     "version": 1
   },
   "net_settings": {

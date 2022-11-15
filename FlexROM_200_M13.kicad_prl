@@ -62,11 +62,11 @@
       35,
       36
     ],
-    "visible_layers": "00011f0_80000001",
+    "visible_layers": "ffdffff_ffffffff",
     "zone_display_mode": 0
   },
   "meta": {
-    "filename": "FlexROM_102.kicad_prl",
+    "filename": "FlexROM_200_M13.kicad_prl",
     "version": 3
   },
   "project": {
