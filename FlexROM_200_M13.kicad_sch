@@ -1348,13 +1348,13 @@
     (uuid fae512d4-8309-4959-897e-8d6e6faa92c5)
   )
 
-  (text "HN61364 mask ROM has 3 OE pins 22, 26, & 27, mask programmable to be either active-high or active-low.\nTANDY 200 service manual schematic labels these as CE rather than OE, and all active-low:\n  22=~{CE0}, 27=~{CE1}, 26=~{CE2}\nBut pin 27 is driven by A15, and so is assummed to actually be programmed to be active-high.\nSo, the labels used here are:\n  22=~{OE0}, 27=OE1, 26=~{OE2}\n"
-    (at 31.75 44.45 0)
+  (text "HN61364 mask ROM has 3 OE pins 22, 26, & 27, mask programmable to be either active-high or active-low.\n\n  22=OE0/~{OE0} ,27=OE1/~{OE1} ,26=OE2/~{OE2}\n\nTANDY 200 service manual schematic labels these as CE rather than OE, and all active-low:\n\n  22=~{CE0}, 27=~{CE1}, 26=~{CE2}\n\nBut they are all actually merely output-enable not chip-enable,\nand pin 27 is connected directly to A15 and so is assummed to actually be programmed to be active-high.\nSo, the labels used here are:\n\n  22=~{OE0}, 27=OE1, 26=~{OE2}\n"
+    (at 31.75 57.15 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 108c1bc9-0a03-4074-a16b-68fa7b374f11)
   )
-  (text "Replaces HN61364 8K mask ROM with 8K FRAM, with breakout for /OE0.\n~{OE2} from bus ignored because TANDY 200 just connects to GND.\n\nTo RUN:\nInstall in TANDY Model 200 position M13, set JP2 to RUN.\nTo read from REX_Classic: Connect ~{OE0}_bus to REX_Classic TP2.\nTo read from FRAM: Connect ~{OE0}_bus to ~{OE0}.\n\nTo PROGRAM:\nPlace board in programmer, short JP1, set JP2 to PGM.\n"
-    (at 165.1 165.1 0)
+  (text "Replaces HN61364 8K mask ROM with 8K EEPROM or FRAM, with breakout for ~{OE0}.\n~{OE2} from bus is NC/ignored because it's only connected to GND in the 200.\n\nTo PROGRAM:\nPlace board in programmer\nShort JP1\nSet JP2 to PGM\n\nTo INSTALL:\nInstall in TANDY Model 200 position M13\nSet JP2 to RUN\n\nTo boot from REX_Classic: Connect ~{OE0}_bus to REX_Classic TP2\nTo boot from EEPROM/FRAM: Connect ~{OE0}_bus to ~{OE0}"
+    (at 165.1 167.64 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 58c08ac6-9e8c-419c-91da-3d50ef40fc69)
   )
@@ -1375,7 +1375,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid c54b2ed1-c092-46c3-8bf7-a2b3c6c3c020)
   )
-  (text "1  2  3   RUN mode (HN61364 pinout on DIP legs)\n\n1  2  3   PROGRAM mode (FM16W08 pinout on DIP legs)"
+  (text "1  2  3   RUN mode (HN61364 pinout)\n\n1  2  3   PROGRAM mode (28C64/FM16W08 pinout)"
     (at 113.411 96.139 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid f909967d-0490-40f5-9491-e64ce6308d1f)
@@ -1585,6 +1585,10 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid ce393d47-7e23-4df9-a458-b49a0034a1d8)
   )
+  (label "OE0" (at 152.4 129.54 270)
+    (effects (font (size 1.27 1.27)) (justify right bottom))
+    (uuid d8d4dfb6-a324-4ef5-9e18-39649f640ada)
+  )
   (label "A7" (at 199.39 83.82 180)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid daf9dfec-0271-41ca-abc3-49a4fcdf4d85)
@@ -1602,7 +1606,7 @@
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00005e5b130a)
     (property "Reference" "U1" (id 0) (at 203.2 61.595 0))
-    (property "Value" "FM16W08" (id 1) (at 210.82 61.595 0)
+    (property "Value" "28C64 / FM16W08" (id 1) (at 210.82 61.595 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "000_LOCAL:SOIC28W" (id 2) (at 209.55 88.9 0)
@@ -2128,7 +2132,7 @@
       (reference "R3") (unit 1) (value "47K") (footprint "000_LOCAL:R_0805")
     )
     (path "/00000000-0000-0000-0000-00005e5b130a"
-      (reference "U1") (unit 1) (value "FM16W08") (footprint "000_LOCAL:SOIC28W")
+      (reference "U1") (unit 1) (value "28C64 / FM16W08") (footprint "000_LOCAL:SOIC28W")
     )
     (path "/5c32c56a-9bae-4a48-bfd8-3977d42bd228"
       (reference "U2") (unit 1) (value "74LVC2G00") (footprint "000_LOCAL:SSOP-8_2.95x2.8x0.65")
