@@ -91,6 +91,8 @@ There is a jumper on the /CS pins in both cases. The only time there is not a ju
 See the FlexROM_100 directions for that.
 
 ## FlexROM_200_M13
+THIS ONE IS UNTESTED  
+Replaces the 8K ROM at position M13 in TANDY 200
 ![](FlexROM_200_M13.jpg)  
 ![](FlexROM_200_M13.svg)  
 
