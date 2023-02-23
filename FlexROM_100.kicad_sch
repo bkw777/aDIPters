@@ -6,8 +6,8 @@
 
   (title_block
     (title "28C256 SOIC to LH535618 DIP")
-    (date "2022-10-12")
-    (rev "003")
+    (date "2023-02-23")
+    (rev "004")
     (company "Brian K. White - b.kenyon.w@gmail.com")
     (comment 1 "TRS-80 Model 100 system rom M12")
     (comment 2 "Support REX main rom feature")
@@ -525,12 +525,12 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 03a88272-ff6a-486d-9a81-42aef82fd8aa)
   )
-  (text "Main ROM\nInternal: close\nREX: open, connect ~{CS_OUT} to REX TP1\n"
+  (text "JP1 - Main ROM Source\nBoot from internal: close\nBoot from REX: open, connect ~{CS_BUS} to REX TP1\n"
     (at 139.7 132.08 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 05d4ad76-46d0-426a-86a6-a0002960ae45)
   )
-  (text "ALE is connected to the original non-standard system ROM,\nconnected to a 2nd ~{CE} to disable the chip when ALE is high,\nbut no common devices have such a pin.\n\nALE should be left not-connected during normal read-only\noperation with a standard part like 28C256.\nThe normal ~{OE} and ~{CS} signals suffice to enable\n& disable the part at the right times.\n\nFor programming, JP2 is closed and the programming adapter\nuses the ALE pin for ~{WE}."
+  (text "Pin 23 ALE is a 2nd ~{CE} on the original non-standard pinout system ROM.\n(disable the chip when ALE is high)\n\nALE should be left not-connected during normal read-only operation with a standard part like 28C256.\nThe normal ~{OE} and ~{CS} signals suffice to enable & disable the part at the right times.\n\nFor programming, JP2 is closed and the programming adapter routes the ALE pin to ~{WE}."
     (at 19.304 195.072 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 92eff014-0419-4901-a6af-aa6489c6c591)
@@ -540,7 +540,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 01a681bc-a840-4a7c-82f8-5f472ddc2bd3)
   )
-  (label "~{CS_OUT}" (at 110.49 130.175 180)
+  (label "~{CS_BUS}" (at 110.49 130.175 180)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 01abc531-7f56-43d1-841d-2bf378b2ed06)
   )
@@ -632,7 +632,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 6536a283-bf4c-4c80-a05d-b89f4a889d81)
   )
-  (label "~{CS_IN}" (at 159.385 100.33 180)
+  (label "~{CS_IC}" (at 159.385 100.33 180)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 6d0569a6-45ed-464b-b867-8e109d7c2854)
   )
@@ -644,7 +644,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 76587883-c9da-46df-813f-775c4fa4a9dc)
   )
-  (label "~{CS_IN}" (at 120.65 130.175 0)
+  (label "~{CS_IC}" (at 120.65 130.175 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 7ad1d43d-6c21-4263-96d2-9712b4063e42)
   )
@@ -724,7 +724,7 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid dfaa15a0-475b-48e4-b4c5-1d9615096b26)
   )
-  (label "~{CS_OUT}" (at 97.79 100.33 180)
+  (label "~{CS_BUS}" (at 97.79 100.33 180)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid e49126a3-f089-453c-aed4-759991ecbd8e)
   )
@@ -862,7 +862,7 @@
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00005e68c7f8)
     (property "Reference" "R2" (id 0) (at 130.81 127.635 90))
-    (property "Value" "47K" (id 1) (at 130.81 132.715 90))
+    (property "Value" "100K" (id 1) (at 130.81 132.715 90))
     (property "Footprint" "000_LOCAL:R_0805" (id 2) (at 130.81 130.175 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -892,7 +892,7 @@
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00005fbfb319)
     (property "Reference" "R1" (id 0) (at 130.81 147.32 90))
-    (property "Value" "47K" (id 1) (at 130.81 152.4 90))
+    (property "Value" "100K" (id 1) (at 130.81 152.4 90))
     (property "Footprint" "000_LOCAL:R_0805" (id 2) (at 130.81 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -1032,10 +1032,10 @@
       (reference "JP2") (unit 1) (value "PROGRAM/RUN") (footprint "000_LOCAL:Pin_Header_Angled_1x02_Pitch2.54mm")
     )
     (path "/00000000-0000-0000-0000-00005fbfb319"
-      (reference "R1") (unit 1) (value "47K") (footprint "000_LOCAL:R_0805")
+      (reference "R1") (unit 1) (value "100K") (footprint "000_LOCAL:R_0805")
     )
     (path "/00000000-0000-0000-0000-00005e68c7f8"
-      (reference "R2") (unit 1) (value "47K") (footprint "000_LOCAL:R_0805")
+      (reference "R2") (unit 1) (value "100K") (footprint "000_LOCAL:R_0805")
     )
     (path "/00000000-0000-0000-0000-00005e5b130a"
       (reference "U1") (unit 1) (value "28C256") (footprint "000_LOCAL:SOIC28W")

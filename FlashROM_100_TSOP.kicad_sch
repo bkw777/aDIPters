@@ -5,9 +5,9 @@
   (paper "USLetter")
 
   (title_block
-    (title "FlashROM_100 - TSOP")
-    (date "2022-10-12")
-    (rev "004")
+    (title "FlashROM_100_TSOP")
+    (date "2023-02-23")
+    (rev "006")
     (company "Brian K. White - b.kenyon.w@gmail.com")
     (comment 1 "TRS-80 Model 100 system rom with suport for REX main rom feature")
   )
@@ -546,6 +546,12 @@
     (uuid 96d45dd6-14ac-4ec7-bc38-dbcf1383bda4)
   )
 
+  (text "AM29F010\nSST39SF010A\nAS29CF010\nAT29C010A\nGLS27SF010\n28F001\n28C010"
+    (at 199.39 106.68 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 80a8b84b-d374-4b45-8908-f677b2a6aedc)
+  )
+
   (label "D1" (at 189.23 60.96 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 0ee37fe4-ca1b-4ee7-9810-055f07f3dd41)
@@ -558,7 +564,7 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 11efbd02-f17b-47c5-bd64-eccea0f34fe8)
   )
-  (label "~{CS}" (at 125.095 127 0)
+  (label "~{CS_IC}" (at 125.095 127 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 132fd7a1-1bb0-4060-bdec-99f3c902dd3a)
   )
@@ -642,7 +648,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 5f01c992-e7ff-4159-addd-e59859b7d129)
   )
-  (label "~{CS}" (at 158.75 114.3 180)
+  (label "~{CS_IC}" (at 158.75 114.3 180)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 61aac3ce-91bb-4c1e-aafd-d7f878eaa152)
   )
@@ -779,7 +785,7 @@
     (property "Footprint" "000_LOCAL:TSOP32-dual" (id 2) (at 173.99 81.28 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/25022B.pdf" (id 3) (at 173.99 88.9 0)
+    (property "Datasheet" "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/20005022C.pdf" (id 3) (at 173.99 88.9 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "24" (uuid 74c4efbd-9ed0-474d-bc64-068614843827))
@@ -876,7 +882,7 @@
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00005e68c7f8)
     (property "Reference" "R2" (id 0) (at 137.795 129.286 90))
-    (property "Value" "47K" (id 1) (at 133.985 129.286 90))
+    (property "Value" "100K" (id 1) (at 133.985 129.286 90))
     (property "Footprint" "000_LOCAL:R_0805" (id 2) (at 133.985 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -891,7 +897,7 @@
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00005e6b3af8)
     (property "Reference" "R1" (id 0) (at 137.795 141.351 90))
-    (property "Value" "47K" (id 1) (at 133.985 141.351 90))
+    (property "Value" "100K" (id 1) (at 133.985 141.351 90))
     (property "Footprint" "000_LOCAL:R_0805" (id 2) (at 133.985 139.065 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -1092,10 +1098,10 @@
       (reference "JP2") (unit 1) (value "Write-Enable") (footprint "000_LOCAL:Pin_Header_Angled_1x02_Pitch2.54mm")
     )
     (path "/00000000-0000-0000-0000-00005e6b3af8"
-      (reference "R1") (unit 1) (value "47K") (footprint "000_LOCAL:R_0805")
+      (reference "R1") (unit 1) (value "100K") (footprint "000_LOCAL:R_0805")
     )
     (path "/00000000-0000-0000-0000-00005e68c7f8"
-      (reference "R2") (unit 1) (value "47K") (footprint "000_LOCAL:R_0805")
+      (reference "R2") (unit 1) (value "100K") (footprint "000_LOCAL:R_0805")
     )
     (path "/00000000-0000-0000-0000-00005e5b130a"
       (reference "U1") (unit 1) (value "29F010") (footprint "000_LOCAL:TSOP32-dual")

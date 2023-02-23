@@ -55,7 +55,12 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "courtyards_overlap|115670001|95800001|00000000-0000-0000-0000-00005f9fc9ac|a3f6ca9c-7216-486f-a501-174707a1552f",
+        "courtyards_overlap|115750001|100050001|00000000-0000-0000-0000-00005f9fc9ac|00000000-0000-0000-0000-00005f9fca43",
+        "courtyards_overlap|115750001|104150001|00000000-0000-0000-0000-00005f9fc9ac|00000000-0000-0000-0000-00005f9fca13",
+        "courtyards_overlap|135300001|97100001|00000000-0000-0000-0000-00005fa053b9|9f4a96cc-025a-4396-8e9c-fe9f4f4cef69"
+      ],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
@@ -86,8 +91,8 @@
         "padstack": "error",
         "pth_inside_courtyard": "ignore",
         "shorting_items": "error",
-        "silk_over_copper": "warning",
-        "silk_overlap": "warning",
+        "silk_over_copper": "ignore",
+        "silk_overlap": "ignore",
         "skew_out_of_range": "error",
         "through_hole_pad_without_hole": "error",
         "too_many_vias": "error",
@@ -106,7 +111,7 @@
         "allow_blind_buried_vias": false,
         "allow_microvias": false,
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.19999999999999998,
         "min_copper_edge_clearance": 0.024999999999999998,
         "min_hole_clearance": 0.25,
         "min_hole_to_hole": 0.25,

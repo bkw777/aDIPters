@@ -16,7 +16,10 @@ The chip may be (re)programmed after soldering by setting the jumpers for progra
 ![](FlexROM_100.jpg)  
 ![](FlexROM_100.svg)  
 
-http://tandy.wiki/FlexROM_100
+info: http://tandy.wiki/FlexROM_100  
+
+PCB: https://www.pcbway.com/project/shareproject/FlexROM_100.html  
+BOM: https://www.digikey.com/short/mmz0bp0h
 
 Uses an electrically re-programmable EEPROM (28C256) in place of the non-standard pinout mask ROM (LH535618) in a TRS-80 Model 100 system rom socket.
 
@@ -28,13 +31,13 @@ To install without REX, just install a jumper on the /CS pins.
 
 To use the REX main rom feature:  
 * Run 2 10-inch female dupont jumper wires from the /CS pins out to the option-rom compartment.  
-* Label the /CS OUT wire so that you can tell which one it is after the machine is re-assembled.  
-* Attach the /CS OUT wire to the TP1 pin on the REX.  
-* Leave the /CS IN wire un-connected loose in the option rom compartment. Do not connect it to TP2. This wire is only used if/when you want to revert from the REX back to the internal main rom without opening the case again.
+* Label the /CS_BUS wire so that you can tell which one it is after the machine is re-assembled.  
+* Attach the /CS_BUS wire to TP1 on the REX.  
+* Leave the /CS_IC wire un-connected loose in the option rom compartment. Do NOT connect it to TP2. This wire is only used if/when you want to revert from the REX back to the internal main rom without opening the case again.
 
 To re-enable the internal ROM (To remove the REX, or just to stop using the main-rom feature):  
-* Disconnect the /CS OUT wire from the REX TP1 pin.  
-* Use a short male dupont jumper wire to join the /CS OUT and /CS IN wires to each other in the option rom compartment.
+* Disconnect the /CS_BUS wire from the REX TP1 pin.  
+* Connect the /CS_BUS wire to the /CS_IC wire with a short male dupont jumper wire.
 
 ## FlexROM_100 Programming Adapter
 ![](FlexROM_100_programming_adapter.jpg)  
@@ -44,12 +47,27 @@ Allows programming the FlexROM_100 without an SOIC-28 test clip.
 
 ## FlashROM_100
 Same as FlexROM_100 but using a 29F010 or compatible flash part instead of a 28C256 EEPROM part.  
-SST39SF010A, GLS29EE010, etc.
+The board uses a 128K FLASH chip simply because they are what's available these days.  
+28C256 have gone from $5 each to $15 each in the last few years.
 
-To program the chip, use the FlashROM_100_Programming_Adapter below, and tell the programmer to ignore the CHIP_ID and use device 28F256.  
-This is because the actual chip is a 128K 29F010, but we are only using 32K and not all of the 29F010 pins are possible to connect to the programmer.  
-So we have to tell the programmer to program a different but compatible 32K part.  
-(The board uses a 128K chip instead of a 32K chip because they are far more available.)
+To program the chip, use the [FlashROM_100_Programming_Adapter](#flashrom_100-programming-adapter) below, and tell the programmer to ignore the size discrepency.  
+Example, using a TL-866 and the [minipro](https://gitlab.com/DavidGriffith/minipro) app:  
+```
+$ minipro -p "SST39SF010A" -u -P -s -w Model_100.y2k.bin
+Found TL866II+ 04.2.132 (0x284)
+Warning: Firmware is newer than expected.
+  Expected  04.2.131 (0x283)
+  Found     04.2.132 (0x284)
+Chip ID: 0xBFB5  OK
+Warning: Incorrect file size: 32768 (needed 131072)
+Erasing... 0.40Sec OK
+Writing Code...  1.64Sec  OK
+Reading Code...  0.25Sec  OK
+Verification OK
+$
+```
+
+TIP: You can run the Model 102 main rom on a Model 100 machine. It fixes a few obscure bugs and there are some tiny differences in the screen font, but otherwise works identically and is compatible with all of the hardware an dsoftware.  
 
 There are 2 versions, PLCC and TSOP
 
@@ -57,13 +75,20 @@ There are 2 versions, PLCC and TSOP
 ![](FlashROM_100_PLCC.jpg)  
 ![](FlashROM_100_PLCC.svg)  
 
+https://www.pcbway.com/project/shareproject/FlashROM_100.html
+
 ### TSOP
 ![](FlashROM_100_TSOP.jpg)  
 ![](FlashROM_100_TSOP.svg)  
 
+PCB: https://www.pcbway.com/project/shareproject/FlashROM_100_tsop.html  
+BOM: https://www.digikey.com/short/7798tt51
+
 ## FlashROM_100 Programming Adapter
 ![](FlashROM_100_programming_adapter.jpg)  
 ![](FlashROM_100_programming_adapter.svg)  
+
+PCB: https://www.pcbway.com/project/shareproject/Programming_Adapter_for_FlashROM_100.html
 
 Allows re-writing the FlashROM_100.
 
