@@ -186,7 +186,7 @@ A 27C256 does not have an ALE pin nor a 2nd /CS pin, and does not need pin 23 co
 The jumpers allow pin 23 in the Molex socket to be connected to nothing, GND, VCC, VPP, or /CE.  
 * For the molded plastic roms with LH53562x part numbers (MS MultiPLAN, Ineractive Solutions), use the /CE position.  
 * For most 3rd party roms constructed of a ceramic 27C256 with pinout adapter, use either /CE, or remove the jumper entirely.  
-* The other options are for possible future use with other new custom option rom modules like [Teeprom](httpsgithub.com/bkw777/Teeprom) or FlashOPT_100 etc, that might be specifically designed to use that otherwise un-used pin for /Vpp or /WE etc. Currently none are in fact so wired.
+* The other options are for possible future use with other new custom option rom modules like [Teeprom](httpsgithub.com/bkw777/Teeprom) or [4ROM](https://github.com/bkw777/Teeprom/blob/master/4ROM.md) etc, that might be specifically designed to use that otherwise un-used pin for /Vpp or /WE etc. Currently no such modules wired like that. So really, just leave it on /CE.
 
 ## DS1000
 ![](DS1000_DIP14.jpg)
