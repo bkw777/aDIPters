@@ -128,7 +128,8 @@ http://tandy.wiki/FlexROM_200
 ![](FLASH_23C1000.jpg)  
 ![](FLASH_23C1000.svg)  
 
-http://tandy.wiki/FLASH_23C1000
+http://tandy.wiki/FLASH_23C1000  
+https://www.pcbway.com/project/shareproject/FlashROM_8300.html
 
 Replaces 23C1000, uPD23C1000, D23C1000A, MX23C1000, etc.
 
@@ -172,6 +173,9 @@ These pins are only used for programming. They only need to be long enough for t
 ## FLASH_23C1000_DIP28
 ![](FLASH_23C1000_DIP28.jpg)  
 ![](FLASH_23C1000_DIP28.svg)  
+
+http://tandy.wiki/FLASH_23C1000  
+https://www.pcbway.com/project/shareproject/FLASH_23C1000_DIP28.html
 
 Replaces 23C1000, uPD23C1000, D23C1000A, MX23C1000, etc.
 
