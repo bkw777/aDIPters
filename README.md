@@ -126,6 +126,8 @@ http://tandy.wiki/FlexROM_200
 
 ## FLASH_23C1000
 ![](FLASH_23C1000.jpg)  
+![](FLASH_23C1000_TSOP_20mm.jpg)  
+![](FLASH_23C1000_PLCC.jpg)  
 ![](FLASH_23C1000.svg)  
 
 http://tandy.wiki/FLASH_23C1000  
