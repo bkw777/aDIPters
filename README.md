@@ -174,6 +174,8 @@ These pins are only used for programming. They only need to be long enough for t
 
 ## FLASH_23C1000_DIP28
 ![](FLASH_23C1000_DIP28.jpg)  
+![](FLASH_23C1000_DIP28_TSOP_20mm.jpg)  
+![](FLASH_23C1000_DIP28_PLCC.jpg)  
 ![](FLASH_23C1000_DIP28.svg)  
 
 http://tandy.wiki/FLASH_23C1000  
@@ -181,7 +183,11 @@ https://www.pcbway.com/project/shareproject/FLASH_23C1000_DIP28.html
 
 Replaces 23C1000, uPD23C1000, D23C1000A, MX23C1000, etc.
 
-Same as FLASH_23C1000, except without exceeding the DIP-28 footprint.  
+Same as FLASH_23C1000, except:
+* Does not exceed the original parts DIP-28 footprint.  
+* Does not accept 27C010 or other parts that have a Vpp pin.  
+* Does accept 256k *020 parts.  
+
 Tested in NEC PC-8300, PC-8401, PC-8500  
 Not yet tested but should also work in Cambridge Z88
 
