@@ -6,8 +6,8 @@
 
   (title_block
     (title "29F010 to 23C1000")
-    (date "2022-10-12")
-    (rev "004")
+    (date "2023-06-16")
+    (rev "005")
     (company "Brian K. White - b.kenyon.w@gmail.com")
   )
 
@@ -1371,7 +1371,7 @@
   (symbol (lib_id "000_LOCAL:GND") (at 76.2 96.52 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 02ca1557-8628-4a1d-8f5e-21c1cbd1d51b)
-    (property "Reference" "#PWR?" (at 76.2 102.87 0)
+    (property "Reference" "#PWR0108" (at 76.2 102.87 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 76.2 100.965 0)
@@ -1387,7 +1387,7 @@
     (instances
       (project "FLASH_23C1000_DIP28"
         (path "/e65fb66d-d72b-4906-abb1-e31b98be20d4"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0108") (unit 1)
         )
       )
     )
@@ -1396,7 +1396,7 @@
   (symbol (lib_id "000_LOCAL:GND") (at 101.6 137.16 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 0507c183-8d2d-4f41-b326-16e4859fa414)
-    (property "Reference" "#PWR?" (at 101.6 143.51 0)
+    (property "Reference" "#PWR0109" (at 101.6 143.51 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 101.6 141.605 0)
@@ -1412,7 +1412,7 @@
     (instances
       (project "FLASH_23C1000_DIP28"
         (path "/e65fb66d-d72b-4906-abb1-e31b98be20d4"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0109") (unit 1)
         )
       )
     )
@@ -1421,7 +1421,7 @@
   (symbol (lib_id "000_LOCAL:VCC") (at 215.9 40.64 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 135b96a2-8121-45ae-aa12-3bb8c21f4248)
-    (property "Reference" "#PWR?" (at 215.9 44.45 0)
+    (property "Reference" "#PWR0102" (at 215.9 44.45 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (at 215.9 36.83 0)
@@ -1437,7 +1437,7 @@
     (instances
       (project "FLASH_23C1000_DIP28"
         (path "/e65fb66d-d72b-4906-abb1-e31b98be20d4"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0102") (unit 1)
         )
       )
     )
@@ -1446,7 +1446,7 @@
   (symbol (lib_id "000_LOCAL:GND") (at 152.4 106.68 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 14843faf-a76b-4e02-8664-f1bc741518fe)
-    (property "Reference" "#PWR?" (at 152.4 113.03 0)
+    (property "Reference" "#PWR0105" (at 152.4 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 152.4 111.125 0)
@@ -1462,7 +1462,7 @@
     (instances
       (project "FLASH_23C1000_DIP28"
         (path "/e65fb66d-d72b-4906-abb1-e31b98be20d4"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0105") (unit 1)
         )
       )
     )
@@ -1471,7 +1471,7 @@
   (symbol (lib_id "000_LOCAL:GND") (at 231.14 102.87 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 777869ab-e249-4891-8c37-c77960c6666d)
-    (property "Reference" "#PWR?" (at 231.14 109.22 0)
+    (property "Reference" "#PWR0103" (at 231.14 109.22 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 231.14 107.315 0)
@@ -1487,7 +1487,7 @@
     (instances
       (project "FLASH_23C1000_DIP28"
         (path "/e65fb66d-d72b-4906-abb1-e31b98be20d4"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0103") (unit 1)
         )
       )
     )
@@ -1496,7 +1496,7 @@
   (symbol (lib_id "000_LOCAL:GND") (at 167.64 102.87 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 84ea8cb2-476f-4ff1-9153-071431a8dcf1)
-    (property "Reference" "#PWR?" (at 167.64 109.22 0)
+    (property "Reference" "#PWR0106" (at 167.64 109.22 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 167.64 107.315 0)
@@ -1512,7 +1512,7 @@
     (instances
       (project "FLASH_23C1000_DIP28"
         (path "/e65fb66d-d72b-4906-abb1-e31b98be20d4"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0106") (unit 1)
         )
       )
     )
@@ -1521,7 +1521,7 @@
   (symbol (lib_id "000_LOCAL:VCC") (at 76.2 40.64 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9468f5a9-bf29-4e36-ac49-fc77d896b45b)
-    (property "Reference" "#PWR?" (at 76.2 44.45 0)
+    (property "Reference" "#PWR0101" (at 76.2 44.45 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (at 76.2 36.83 0)
@@ -1537,7 +1537,7 @@
     (instances
       (project "FLASH_23C1000_DIP28"
         (path "/e65fb66d-d72b-4906-abb1-e31b98be20d4"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0101") (unit 1)
         )
       )
     )
@@ -1546,7 +1546,7 @@
   (symbol (lib_id "000_LOCAL:VCC") (at 62.23 133.35 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b021c1cd-6bbd-4102-b1a0-0e9e380336cb)
-    (property "Reference" "#PWR?" (at 62.23 137.16 0)
+    (property "Reference" "#PWR0110" (at 62.23 137.16 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (at 62.23 129.54 0)
@@ -1562,7 +1562,7 @@
     (instances
       (project "FLASH_23C1000_DIP28"
         (path "/e65fb66d-d72b-4906-abb1-e31b98be20d4"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0110") (unit 1)
         )
       )
     )
@@ -1571,7 +1571,7 @@
   (symbol (lib_id "000_LOCAL:GND") (at 215.9 106.68 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid bb178dc5-5b6d-40df-bb43-5ec33dccae20)
-    (property "Reference" "#PWR?" (at 215.9 113.03 0)
+    (property "Reference" "#PWR0104" (at 215.9 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 215.9 111.125 0)
@@ -1587,7 +1587,7 @@
     (instances
       (project "FLASH_23C1000_DIP28"
         (path "/e65fb66d-d72b-4906-abb1-e31b98be20d4"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0104") (unit 1)
         )
       )
     )
@@ -1596,7 +1596,7 @@
   (symbol (lib_id "000_LOCAL:VCC") (at 152.4 40.64 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d2c11ace-f743-4fc6-b03d-8ac374789e59)
-    (property "Reference" "#PWR?" (at 152.4 44.45 0)
+    (property "Reference" "#PWR0107" (at 152.4 44.45 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VCC" (at 152.4 36.83 0)
@@ -1612,7 +1612,7 @@
     (instances
       (project "FLASH_23C1000_DIP28"
         (path "/e65fb66d-d72b-4906-abb1-e31b98be20d4"
-          (reference "#PWR?") (unit 1)
+          (reference "#PWR0107") (unit 1)
         )
       )
     )
