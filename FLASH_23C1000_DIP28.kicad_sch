@@ -1134,7 +1134,7 @@
     (property "Value" "23C1000" (at 83.185 40.005 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "000_LOCAL:DIP28_0.6_pcb_sil_pins" (at 76.2 68.58 0)
+    (property "Footprint" "000_LOCAL:DIP-28_600_pcb_shallow_notch" (at 76.2 68.58 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/doc0014.pdf" (at 76.2 68.58 0)
@@ -1274,9 +1274,9 @@
     (property "Datasheet" "~" (at 95.25 129.54 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 8e01ad64-6617-48b5-87aa-0a2e8ae74e0b))
-    (pin "2" (uuid f7182a61-6851-4627-8b70-3c21fc1a5095))
-    (pin "3" (uuid cc28d2b8-b3a9-4234-81a1-1831ab654b6d))
+    (pin "1" (uuid 37512f09-f1ae-490f-9b75-71f903989629))
+    (pin "2" (uuid d15d97df-4730-4cf1-a753-a77c369b53e7))
+    (pin "3" (uuid f4cdad6a-1f3f-4220-9eef-820f49df9c1a))
     (instances
       (project "FLASH_23C1000_DIP28"
         (path "/e65fb66d-d72b-4906-abb1-e31b98be20d4"
