@@ -98,6 +98,10 @@ Allows re-writing the FlashROM_100.
 
 http://tandy.wiki/FlexROM_102
 
+([DigiKey cart](https://www.digikey.com/en/mylists/list/5FEBN35SNT)) Built 2025.01.15 by John Hutchison KI5NYZ
+
+([OshPark PCB](https://oshpark.com/shared_projects/NmfnbreW)) Built 2025.01.15 by John Hutchison KI5NYZ
+
 This is a cross between the 28C256_to_27C256 above, and the FlexROM_100 above.
 
 TANDY 102 has a standard pinout main rom, and so to replace the main rom you can use the generic 28C256_to_27C256 above, or this.
