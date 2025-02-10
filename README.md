@@ -3,8 +3,8 @@ This is a collection of different adapter PCBs to plug SMT parts into DIP socket
 Generally to use a newer PLCC, SOIC, or TSOP EEPROM or Flash part to replace a DIP mask ROM or UV EPROM in a vintage computer.
 
 ## 28C256_to_27C256
-![](28C256_to_27C256.jpg)  
-![](28C256_to_27C256.svg)
+![](out/28C256_to_27C256.jpg)  
+![](out/28C256_to_27C256.svg)
 
 http://tandy.wiki/28C256_to_27C256
 
@@ -13,8 +13,8 @@ Use an electrically re-programmable EEPROM (28C256) in any socket that normally 
 The chip may be (re)programmed after soldering by setting the jumpers for programming and placing the board directly in a programmer.
 
 ## FlexROM_100
-![](FlexROM_100.jpg)  
-![](FlexROM_100.svg)  
+![](out/FlexROM_100.jpg)  
+![](out/FlexROM_100.svg)  
 
 info: http://tandy.wiki/FlexROM_100  
 
@@ -40,8 +40,8 @@ To re-enable the internal ROM (To remove the REX, or just to stop using the main
 * Connect the /CS_BUS wire to the /CS_IC wire with a short male dupont jumper wire.
 
 ## FlexROM_100 Programming Adapter
-![](FlexROM_100_programming_adapter.jpg)  
-![](FlexROM_100_programming_adapter.svg)  
+![](out/FlexROM_100_programming_adapter.jpg)  
+![](out/FlexROM_100_programming_adapter.svg)  
 
 Allows programming the FlexROM_100 without an SOIC-28 test clip.  
 
@@ -67,40 +67,42 @@ Verification OK
 $
 ```
 
-TIP: You can run the Model 102 main rom on a Model 100 machine. It fixes a few obscure bugs and there are some tiny differences in the screen font, but otherwise works identically and is compatible with all of the hardware an dsoftware.  
+TIP: You can run the Model 102 main rom on a Model 100 machine. It fixes a few obscure bugs and there are some tiny differences in the screen font, but otherwise works identically and is compatible with all of the hardware and software.  
 
 There are 2 versions, PLCC and TSOP
 
 ### PLCC
-![](FlashROM_100_PLCC.jpg)  
-![](FlashROM_100_PLCC.svg)  
+![](out/FlashROM_100_PLCC.jpg)  
+![](out/FlashROM_100_PLCC.svg)  
 
 https://www.pcbway.com/project/shareproject/FlashROM_100.html
 
 ### TSOP
-![](FlashROM_100_TSOP.jpg)  
-![](FlashROM_100_TSOP.svg)  
+![](out/FlashROM_100_TSOP.jpg)  
+![](out/FlashROM_100_TSOP.svg)  
 
 PCB: https://www.pcbway.com/project/shareproject/FlashROM_100_tsop.html  
 BOM: https://www.digikey.com/short/7798tt51
 
 ## FlashROM_100 Programming Adapter
-![](FlashROM_100_programming_adapter.jpg)  
-![](FlashROM_100_programming_adapter.svg)  
+![](out/FlashROM_100_programming_adapter.jpg)  
+![](out/FlashROM_100_programming_adapter.svg)  
 
 PCB: https://www.pcbway.com/project/shareproject/Programming_Adapter_for_FlashROM_100.html
 
 Allows re-writing the FlashROM_100.
 
 ## FlexROM_102
-![](FlexROM_102.jpg)  
-![](FlexROM_102.svg)  
+![](out/FlexROM_102.jpg)  
+![](out/FlexROM_102.svg)  
 
 http://tandy.wiki/FlexROM_102
 
-This is a cross between the 28C256_to_27C256 above, and the FlexROM_100 above.
+This is like FlexROM_100 above but for TANDY 102, 200, and some late-model 100's.
 
-TANDY 102 has a standard pinout main rom, and so to replace the main rom you can use the generic 28C256_to_27C256 above, or this.
+TANDY 102, 200, and some late-model TRS-80 Model 100's have a standard pinout main rom, and so to replace the main rom you can use a plain 27C256, or the generic 28C256_to_27C256 above, or FlexROM_102.  
+If a Model 100 has a main rom with part number LH535618, it requires FlexROM_100.  
+If a Model 100 has a main rom with part number 3256C07, it requires FlexROM_102 (or 28C256_to_27C256 or an ordinary 27C256).
 
 This just adds pins to break out /CS for use with the main-rom feature of REX Classic, the same as FlexROM_100 above.
 
@@ -115,20 +117,22 @@ To install/run, install a jumper on the /CS pins, set the mini jumpers to RUN (s
 There is a jumper on the /CS pins in both cases. The only time there is not a jumper on the /CS pins is to use the REX Classic main-rom feature.  
 See the FlexROM_100 directions for that.
 
+Some late-model TRS-80 Model 100\'s  
+
 ## FlexROM_200_M13
 THIS ONE IS UNTESTED  
 Replaces the 8K ROM at position M13 in TANDY 200
-![](FlexROM_200_M13.jpg)  
-![](FlexROM_200_M13.svg)  
+![](out/FlexROM_200_M13.jpg)  
+![](out/FlexROM_200_M13.svg)  
 
 [FlexROM_200_M13 BOM](FlexROM_200_M13.BOM.csv) or ([DigiKey cart](https://www.digikey.com/short/q3zm9cf4))  
 http://tandy.wiki/FlexROM_200
 
 ## FLASH_23C1000
-![](FLASH_23C1000.jpg)  
-![](FLASH_23C1000_TSOP_20mm.jpg)  
-![](FLASH_23C1000_PLCC.jpg)  
-![](FLASH_23C1000.svg)  
+![](out/FLASH_23C1000.jpg)  
+![](out/FLASH_23C1000_TSOP_20mm.jpg)  
+![](out/FLASH_23C1000_PLCC.jpg)  
+![](out/FLASH_23C1000.svg)  
 
 http://tandy.wiki/FLASH_23C1000  
 https://www.pcbway.com/project/shareproject/FlashROM_8300.html
@@ -173,10 +177,10 @@ For safety, cut all 4 top pins a little short, 1, 2, 31, 32, so that they don't 
 These pins are only used for programming. They only need to be long enough for the programmer socket to grab them for a few seconds.
 
 ## FLASH_23C1000_DIP28
-![](FLASH_23C1000_DIP28.jpg)  
-![](FLASH_23C1000_DIP28_TSOP_20mm.jpg)  
-![](FLASH_23C1000_DIP28_PLCC.jpg)  
-![](FLASH_23C1000_DIP28.svg)  
+![](out/FLASH_23C1000_DIP28.jpg)  
+![](out/FLASH_23C1000_DIP28_TSOP_20mm.jpg)  
+![](out/FLASH_23C1000_DIP28_PLCC.jpg)  
+![](out/FLASH_23C1000_DIP28.svg)  
 
 http://tandy.wiki/FLASH_23C1000  
 https://www.pcbway.com/project/shareproject/FLASH_23C1000_DIP28.html
@@ -209,23 +213,26 @@ To install:
 * Install the board in the DIP-28 socket in place of any uPD23C1000, D23C1000A, MX23C1000 etc.
 
 ## TANDY 100/102/200 Option ROM to 27C256 pinout programming adapter
-![](TRS-80_100_200_Option_ROM_programming_adapter.jpg)  
-![](TRS-80_100_200_Option_ROM_programming_adapter.svg)
+![](out/TRS-80_100_200_Option_ROM_programming_adapter.jpg)  
+![](out/TRS-80_100_200_Option_ROM_programming_adapter.svg)
 
 If you have a Molex 78805 socket and are willing to consume it for this, this provides an adapter to allow reading Model 100/200 Option ROMs in an eprom programmer without having to bend any pins or desolder any chips.
 
 The jumpers provide 5 different ways to handle pin #23 in the socket.  
-In the Model 100, pin 23 is labelled as a 2nd /CS (aka /CE), but is connected to the ALE bus signal.  
-To be clear, I don't mean CS2, I mean a 2nd active-low /CS1.
-The very few option roms that natively have the non-standard Model 100 pinout (MS MultiPLAN, Ineractive Solutions) require pin 23 be connected to /CE.  
-Most (all?) other option roms are constructed from standard 27C256's in various forms of pinout adapters.  
-A 27C256 does not have an ALE pin nor a 2nd /CS pin, and does not need pin 23 connected to anything.  
-The jumpers allow pin 23 in the Molex socket to be connected to nothing, GND, VCC, VPP, or /CE.  
+
+In the Model 100 option rom socket, pin 23 is connected to the ALE bus signal and labelled as a 2nd active-low /CE.  
+To make the Molex socket on the adapter emulate the option rom socket in a Model 100 as completely as possible, pin 23 in the socket should be a 2nd copy of the /CE pin from the programmer. Basically using the /CE signal as a fake ALE signal.  
+But only 2 known option roms actually use the signal, MS MultiPLAN and Interactive Solutions.  
+Most commercial option roms are a 27C256 in some form of pinout adapter, and they don't connect the ALE pin from the bus to anything.  
+
+The jumpers allow pin 23 in the Molex socket to be connected to the programmer pins: GND, VCC, VPP, /CE, or nothing.  
 * For the molded plastic roms with LH53562x part numbers (MS MultiPLAN, Ineractive Solutions), use the /CE position.  
-* For most 3rd party roms constructed of a ceramic 27C256 with pinout adapter, use either /CE, or remove the jumper entirely.  
-* The other options are for possible future use with other new custom option rom modules like [Teeprom](httpsgithub.com/bkw777/Teeprom) or [4ROM](https://github.com/bkw777/Teeprom/blob/master/4ROM.md) etc, that might be specifically designed to use that otherwise un-used pin for /Vpp or /WE etc. Currently no such modules wired like that. So really, just leave it on /CE.
+* For most 3rd party roms constructed of a ceramic 27C256 with a pinout adapter, use either /CE, or remove the jumper entirely.  
+* The other options are for possible future use with other new custom option rom modules like [Teeprom](httpsgithub.com/bkw777/Teeprom) or [M4ROM](https://github.com/bkw777/M4ROM/) etc, that might be specifically designed to use that otherwise un-used pin for VPP or /WE etc. Currently no such modules wired like that. So generally just leave it on /CE.
 
 ## DS1000
-![](DS1000_DIP14.jpg)
-![](DS1000_DIP14.svg)
+![](out/DS1000_DIP14.jpg)
+![](out/DS1000_DIP14.svg)
 
+## SM8 SSOP-8 DIP-8
+![](out/SM8_DIP8.jpg)
